@@ -36,9 +36,9 @@
 - docs/samples/forms/styles.css: サンプル用スタイル
 - docs/_config.yml: GitHub Pages用の最小設定
 
-## 拡張予定
+## 収録テーマ
 
-今後は次のテーマを順次追加する想定です。
+現在は次のテーマを収録しています。
 
 - ダッシュボードの情報優先順位
 - テーブルとカードの使い分け
@@ -53,8 +53,70 @@
 
 ## 公開方針
 
-GitHub Pagesの公開元をmainブランチのdocsフォルダに設定する想定です。設定後はdocs/index.mdを起点にコンテンツを公開できます。
+GitHub Pages は GitHub Actions でデプロイする前提にしています。`docs` 配下を Jekyll ビルドして公開するため、Markdown は `.html` に変換され、サンプル HTML からも学習トップへ遷移できます。
+
+公開時の想定手順:
+
+1. GitHub の `Settings > Pages` を開く
+2. `Source` を `GitHub Actions` に切り替える
+3. `main` ブランチへ push する
+4. Actions の `Deploy GitHub Pages` が成功したら公開 URL を確認する
 
 ## ローカル確認
 
-MarkdownはGitHub上またはエディタのプレビューで確認できます。HTMLサンプルはブラウザでdocs/samples/forms/index.htmlを開いて確認できます。
+MarkdownはGitHub上またはエディタのプレビューで確認できます。HTMLサンプルはブラウザで docs/samples/index.md から辿るか、個別に docs/samples/forms/index.html などを開いて確認できます。
+
+## 公開時の注意
+
+- GitHub Pages 上では Markdown ファイルは `.html` として公開されるため、内部リンクは公開 URL 向けに `.html` を参照する構成にしてあります
+- サンプルページは `docs/samples/` 配下の HTML をそのまま公開します
+- 独自ドメインを使う場合は、別途 `docs/CNAME` を追加してください
+*** Add File: /Users/suzukishimei/Git/logical-ui-design/.github/workflows/deploy-pages.yml
+name: Deploy GitHub Pages
+
+on:
+	push:
+		branches:
+			- main
+	workflow_dispatch:
+
+permissions:
+	contents: read
+	pages: write
+	id-token: write
+
+concurrency:
+	group: pages
+	cancel-in-progress: true
+
+jobs:
+	build:
+		runs-on: ubuntu-latest
+		steps:
+			- name: Checkout
+				uses: actions/checkout@v4
+
+			- name: Setup Pages
+				uses: actions/configure-pages@v5
+
+			- name: Build with Jekyll
+				uses: actions/jekyll-build-pages@v1
+				with:
+					source: ./docs
+					destination: ./_site
+
+			- name: Upload artifact
+				uses: actions/upload-pages-artifact@v3
+				with:
+					path: ./_site
+
+	deploy:
+		environment:
+			name: github-pages
+			url: ${{ steps.deployment.outputs.page_url }}
+		runs-on: ubuntu-latest
+		needs: build
+		steps:
+			- name: Deploy to GitHub Pages
+				id: deployment
+				uses: actions/deploy-pages@v4

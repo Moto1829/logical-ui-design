@@ -7,14 +7,74 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main class="placeholder-page">
-      <p class="eyebrow">UI Sample</p>
-      <h1>UIレビューケースの比較サンプル</h1>
-      <p>このページは記載場所を先に確保したサンプルです。今後、改善前後の架空画面とレビュー例を追加します。</p>
-      <nav>
-        <a href="../../index.md">学習トップへ</a>
-        <a href="../index.md">サンプル一覧へ</a>
-      </nav>
+    <main class="page">
+      <header class="hero">
+        <p class="eyebrow">UI Sample</p>
+        <h1>レビューは違和感を改善可能な言葉に変える</h1>
+        <p class="lead">
+          架空の案件一覧を題材に、悪いコメントと良いコメントの差を見せます。
+        </p>
+        <nav class="page-nav" aria-label="ページナビゲーション">
+          <a href="../../index.html">学習トップへ</a>
+          <a href="../index.html">サンプル一覧へ</a>
+        </nav>
+      </header>
+
+      <section class="comparison">
+        <article class="card bad-example">
+          <span class="badge badge-bad">Bad</span>
+          <h2>悪いレビュー</h2>
+          <p class="summary">感想だけで、何が問題でどう直すかが残りません。</p>
+
+          <div class="mock-screen cluttered">
+            <div class="screen-head">案件一覧</div>
+            <div class="screen-grid">
+              <div class="item alert">期限切れ 3件</div>
+              <div class="item">通常案件 18件</div>
+              <div class="item primaryish">実行</div>
+              <div class="item">通知 12件</div>
+            </div>
+          </div>
+
+          <div class="review-note bad-note">
+            <strong>レビューコメント</strong>
+            <p>なんとなく見づらいです。ボタンも分かりづらいので、もう少し整理してください。</p>
+          </div>
+
+          <ul class="points">
+            <li>問題の場所と理由が特定できない</li>
+            <li>改善方向が曖昧で再現性がない</li>
+            <li>受け手によって解釈がばらつく</li>
+          </ul>
+        </article>
+
+        <article class="card good-example">
+          <span class="badge badge-good">Good</span>
+          <h2>良いレビュー</h2>
+          <p class="summary">観察した事実と改善案がセットで書かれ、次の修正につながります。</p>
+
+          <div class="mock-screen ordered">
+            <div class="screen-head">案件一覧</div>
+            <div class="priority-bar">要対応: 期限切れ 3件</div>
+            <div class="screen-grid focused">
+              <div class="item">通常案件 18件</div>
+              <div class="item action">対応を開始する</div>
+              <div class="item">通知 12件</div>
+            </div>
+          </div>
+
+          <div class="review-note good-note">
+            <strong>レビューコメント</strong>
+            <p>期限切れ案件と通常案件の視覚差が小さく、優先順位が判断しにくいです。期限切れを上段に分離すると、営業担当が最初に見るべき情報が明確になります。また「実行」では結果が読めないため「対応を開始する」など操作結果が分かる文言が適切です。</p>
+          </div>
+
+          <ul class="points">
+            <li>観察事実、理由、改善案が一続きで書かれている</li>
+            <li>画面の目的に照らして指摘できている</li>
+            <li>次の修正にそのまま使える</li>
+          </ul>
+        </article>
+      </section>
     </main>
   </body>
 </html>

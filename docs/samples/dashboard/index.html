@@ -7,14 +7,77 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main class="placeholder-page">
-      <p class="eyebrow">UI Sample</p>
-      <h1>ダッシュボードの比較サンプル</h1>
-      <p>このページは記載場所を先に確保したサンプルです。今後、情報優先順位とカード配置の比較を追加します。</p>
-      <nav>
-        <a href="../../index.md">学習トップへ</a>
-        <a href="../index.md">サンプル一覧へ</a>
-      </nav>
+    <main class="page">
+      <header class="hero">
+        <p class="eyebrow">UI Sample</p>
+        <h1>ダッシュボードの情報優先順位</h1>
+        <p class="lead">
+          ダッシュボードでは、持っている情報を全部並べるのではなく、最初の判断に必要な情報を先に見せる必要があります。
+        </p>
+        <nav class="page-nav" aria-label="ページナビゲーション">
+          <a href="../../index.html">学習トップへ</a>
+          <a href="../index.html">サンプル一覧へ</a>
+        </nav>
+      </header>
+
+      <section class="comparison">
+        <article class="card bad-example">
+          <span class="badge badge-bad">Bad</span>
+          <h2>悪い例</h2>
+          <p class="summary">重要度の違う情報が同じ強さで並び、異常も通常情報に埋もれています。</p>
+
+          <div class="dashboard-grid noisy">
+            <div class="tile">売上 1,240,000</div>
+            <div class="tile">新規顧客 18</div>
+            <div class="tile">商談 42</div>
+            <div class="tile">未対応 7</div>
+            <div class="tile">解約率 2.1%</div>
+            <div class="tile">期限超過 3</div>
+            <div class="tile chart">週次推移</div>
+            <div class="tile">通知 12</div>
+          </div>
+
+          <ul class="points">
+            <li>今すぐ見るべき異常が埋もれている</li>
+            <li>カードが同格で並び、視線の優先順位がない</li>
+            <li>次に何を見ればよいか判断しにくい</li>
+          </ul>
+        </article>
+
+        <article class="card good-example">
+          <span class="badge badge-good">Good</span>
+          <h2>良い例</h2>
+          <p class="summary">最初にアラートを分離し、その下に主要KPIと補助情報を整理しています。</p>
+
+          <div class="dashboard-stack">
+            <div class="alert-row">要対応: 期限超過 3件 / 未対応 7件</div>
+            <div class="kpi-grid">
+              <div class="kpi-card strong">
+                <span class="label">売上</span>
+                <strong>1,240,000</strong>
+              </div>
+              <div class="kpi-card">
+                <span class="label">新規顧客</span>
+                <strong>18</strong>
+              </div>
+              <div class="kpi-card">
+                <span class="label">商談</span>
+                <strong>42</strong>
+              </div>
+            </div>
+            <div class="support-grid">
+              <div class="support-card">週次推移</div>
+              <div class="support-card">通知 12件</div>
+            </div>
+          </div>
+
+          <ul class="points">
+            <li>異常と定常情報が分かれ、優先順位が明確である</li>
+            <li>主要KPIが比較しやすい単位で並んでいる</li>
+            <li>補助情報は下段に整理され、視線を邪魔しない</li>
+          </ul>
+        </article>
+      </section>
     </main>
   </body>
 </html>

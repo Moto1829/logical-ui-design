@@ -7,14 +7,59 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main class="placeholder-page">
-      <p class="eyebrow">UI Sample</p>
-      <h1>エラー状態の比較サンプル</h1>
-      <p>このページは記載場所を先に確保したサンプルです。今後、権限不足やタイムアウトを含む失敗時の比較を追加します。</p>
-      <nav>
-        <a href="../../index.md">学習トップへ</a>
-        <a href="../index.md">サンプル一覧へ</a>
-      </nav>
+    <main class="page">
+      <header class="hero">
+        <p class="eyebrow">UI Sample</p>
+        <h1>失敗時は回復導線を返す</h1>
+        <p class="lead">
+          エラー状態では、問題の通知だけでなく、どう回復できるかを示す必要があります。
+        </p>
+        <nav class="page-nav" aria-label="ページナビゲーション">
+          <a href="../../index.html">学習トップへ</a>
+          <a href="../index.html">サンプル一覧へ</a>
+        </nav>
+      </header>
+
+      <section class="comparison">
+        <article class="card bad-example">
+          <span class="badge badge-bad">Bad</span>
+          <h2>悪い例</h2>
+          <p class="summary">失敗したことだけを伝え、何が起きたかも次の行動も分かりません。</p>
+
+          <div class="state-box plain">
+            <h3>保存に失敗しました</h3>
+            <p class="error-copy">エラーが発生しました。</p>
+          </div>
+
+          <ul class="points">
+            <li>原因が曖昧で、ユーザーが判断できない</li>
+            <li>再試行すべきか待つべきか分からない</li>
+            <li>権限不足なのか通信失敗なのか区別できない</li>
+          </ul>
+        </article>
+
+        <article class="card good-example">
+          <span class="badge badge-good">Good</span>
+          <h2>良い例</h2>
+          <p class="summary">何が起きたかと、次に取れる行動がセットで示されています。</p>
+
+          <div class="state-box guided">
+            <h3>保存できませんでした</h3>
+            <p class="error-copy strong">通信が不安定なため保存に失敗しました</p>
+            <p class="helper">入力内容は保持されています。接続を確認して再試行してください。</p>
+            <div class="actions">
+              <button class="secondary">あとで再試行する</button>
+              <button class="primary">再試行する</button>
+            </div>
+          </div>
+
+          <ul class="points">
+            <li>原因と状態が具体的に伝わる</li>
+            <li>入力が保持されていることが分かり、不安が減る</li>
+            <li>次の行動が明確で、行き止まりにならない</li>
+          </ul>
+        </article>
+      </section>
     </main>
   </body>
 </html>

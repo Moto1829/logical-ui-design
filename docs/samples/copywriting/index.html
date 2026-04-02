@@ -7,14 +7,71 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main class="placeholder-page">
-      <p class="eyebrow">UI Sample</p>
-      <h1>UI文言設計の比較サンプル</h1>
-      <p>このページは記載場所を先に確保したサンプルです。今後、ボタン文言やエラー文言の比較を追加します。</p>
-      <nav>
-        <a href="../../index.md">学習トップへ</a>
-        <a href="../index.md">サンプル一覧へ</a>
-      </nav>
+    <main class="page">
+      <header class="hero">
+        <p class="eyebrow">UI Sample</p>
+        <h1>文言は操作と状態を具体化する</h1>
+        <p class="lead">
+          抽象語のボタンや曖昧なエラーは、ユーザーに余計な判断コストを発生させます。
+        </p>
+        <nav class="page-nav" aria-label="ページナビゲーション">
+          <a href="../../index.html">学習トップへ</a>
+          <a href="../index.html">サンプル一覧へ</a>
+        </nav>
+      </header>
+
+      <section class="comparison">
+        <article class="card bad-example">
+          <span class="badge badge-bad">Bad</span>
+          <h2>悪い例</h2>
+          <p class="summary">抽象的な文言ばかりで、何が起きるかも何を直すかも分かりません。</p>
+
+          <div class="panel vague">
+            <h3>設定変更</h3>
+            <label class="field">
+              <span>メール</span>
+              <input type="text" value="abc" />
+            </label>
+            <p class="error-text">入力が正しくありません</p>
+            <div class="actions">
+              <button class="secondary">OK</button>
+              <button class="primary">実行</button>
+            </div>
+          </div>
+
+          <ul class="points">
+            <li>ボタンを押した結果が読めない</li>
+            <li>何をどう直すべきかが不明である</li>
+            <li>文脈を読み直さないと判断できない</li>
+          </ul>
+        </article>
+
+        <article class="card good-example">
+          <span class="badge badge-good">Good</span>
+          <h2>良い例</h2>
+          <p class="summary">操作結果と修正方法が具体的で、次の行動をその場で決められます。</p>
+
+          <div class="panel concrete">
+            <h3>通知先メールアドレスの変更</h3>
+            <label class="field">
+              <span>通知先メールアドレス</span>
+              <input type="text" value="abc" />
+            </label>
+            <p class="helper">変更後はこのアドレスに通知が届きます。</p>
+            <p class="error-text detailed">メールアドレスの形式で入力してください。</p>
+            <div class="actions">
+              <button class="secondary">変更をやめる</button>
+              <button class="primary">メールアドレスを保存する</button>
+            </div>
+          </div>
+
+          <ul class="points">
+            <li>押した結果がボタン文言で分かる</li>
+            <li>補助説明が不安を減らしている</li>
+            <li>エラー文言が修正方法を返している</li>
+          </ul>
+        </article>
+      </section>
     </main>
   </body>
 </html>

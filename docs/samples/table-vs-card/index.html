@@ -7,14 +7,94 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main class="placeholder-page">
-      <p class="eyebrow">UI Sample</p>
-      <h1>テーブルとカードの比較サンプル</h1>
-      <p>このページは記載場所を先に確保したサンプルです。今後、比較向きの表示と一覧向きの表示を追加します。</p>
-      <nav>
-        <a href="../../index.md">学習トップへ</a>
-        <a href="../index.md">サンプル一覧へ</a>
-      </nav>
+    <main class="page">
+      <header class="hero">
+        <p class="eyebrow">UI Sample</p>
+        <h1>テーブルとカードの使い分け</h1>
+        <p class="lead">
+          同じ一覧でも、比較したいのか、一件ずつ理解したいのかで適した見せ方は変わります。
+        </p>
+        <nav class="page-nav" aria-label="ページナビゲーション">
+          <a href="../../index.html">学習トップへ</a>
+          <a href="../index.html">サンプル一覧へ</a>
+        </nav>
+      </header>
+
+      <section class="comparison">
+        <article class="card bad-example">
+          <span class="badge badge-bad">Bad</span>
+          <h2>悪い例</h2>
+          <p class="summary">案件比較が必要なのにカードで並べており、項目の横断比較がしにくい状態です。</p>
+
+          <div class="card-list">
+            <div class="item-card">
+              <h3>会員登録導線改善</h3>
+              <p>担当: 田中</p>
+              <p>状態: 要対応</p>
+              <p>期限: 4/5</p>
+              <p>工数: 14h</p>
+            </div>
+            <div class="item-card">
+              <h3>管理画面改修</h3>
+              <p>担当: 山口</p>
+              <p>状態: 確認中</p>
+              <p>期限: 4/7</p>
+              <p>工数: 9h</p>
+            </div>
+          </div>
+
+          <ul class="points">
+            <li>状態や期限を横断比較しにくい</li>
+            <li>件数が増えるほど視線移動が増える</li>
+            <li>比較目的の一覧として効率が悪い</li>
+          </ul>
+        </article>
+
+        <article class="card good-example">
+          <span class="badge badge-good">Good</span>
+          <h2>良い例</h2>
+          <p class="summary">比較が必要な情報を列でそろえ、何が違うのかを一目で見られる状態です。</p>
+
+          <div class="table-wrap">
+            <div class="table-row head">
+              <span>案件</span>
+              <span>担当</span>
+              <span>状態</span>
+              <span>期限</span>
+              <span>工数</span>
+            </div>
+            <div class="table-row">
+              <span>会員登録導線改善</span>
+              <span>田中</span>
+              <span class="emphasis">要対応</span>
+              <span>4/5</span>
+              <span>14h</span>
+            </div>
+            <div class="table-row">
+              <span>管理画面改修</span>
+              <span>山口</span>
+              <span>確認中</span>
+              <span>4/7</span>
+              <span>9h</span>
+            </div>
+          </div>
+
+          <ul class="points">
+            <li>列で比較できるため、差分を素早く把握できる</li>
+            <li>比較したい項目が同じ位置に並び、探索しやすい</li>
+            <li>一覧上の判断に向いた構造になっている</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="single-column">
+        <article class="note-card">
+          <h2>カードが向く場面</h2>
+          <p>
+            一件ごとの文脈や補足情報が大切で、比較より理解が重要なときはカードが向いています。求人一覧、記事一覧、案件の概要一覧などが典型です。
+          </p>
+        </article>
+      </section>
     </main>
   </body>
 </html>

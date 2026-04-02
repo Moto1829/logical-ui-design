@@ -7,14 +7,66 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main class="placeholder-page">
-      <p class="eyebrow">UI Sample</p>
-      <h1>アクセシビリティ実践サンプル</h1>
-      <p>このページは記載場所を先に確保したサンプルです。今後、ラベル、フォーカス、コントラストの改善比較を追加します。</p>
-      <nav>
-        <a href="../../index.md">学習トップへ</a>
-        <a href="../index.md">サンプル一覧へ</a>
-      </nav>
+    <main class="page">
+      <header class="hero">
+        <p class="eyebrow">UI Sample</p>
+        <h1>アクセシビリティは意味と操作可能性を残す</h1>
+        <p class="lead">
+          見た目が整っていても、ラベル、フォーカス、状態説明が欠けると使えないUIになります。
+        </p>
+        <nav class="page-nav" aria-label="ページナビゲーション">
+          <a href="../../index.html">学習トップへ</a>
+          <a href="../index.html">サンプル一覧へ</a>
+        </nav>
+      </header>
+
+      <section class="comparison">
+        <article class="card bad-example">
+          <span class="badge badge-bad">Bad</span>
+          <h2>悪い例</h2>
+          <p class="summary">見た目は軽くても、ラベル不足と色依存で意味が抜け落ちています。</p>
+
+          <div class="panel inaccessible">
+            <h3>登録フォーム</h3>
+            <input class="ghost-input" type="text" placeholder="メールアドレス" />
+            <input class="ghost-input error" type="password" placeholder="パスワード" />
+            <p class="status bad-status">赤色の項目を確認してください</p>
+            <button class="flat-button">登録</button>
+          </div>
+
+          <ul class="points">
+            <li>ラベルがなく、入力後に項目の意味が消える</li>
+            <li>エラーが色だけに依存している</li>
+            <li>フォーカス時の強い手がかりが想定されていない</li>
+          </ul>
+        </article>
+
+        <article class="card good-example">
+          <span class="badge badge-good">Good</span>
+          <h2>良い例</h2>
+          <p class="summary">ラベル、文言、視認しやすい状態表示で意味が途切れません。</p>
+
+          <div class="panel accessible">
+            <h3>登録フォーム</h3>
+            <label class="field labeled">
+              <span>メールアドレス</span>
+              <input class="focusable" type="text" value="user@example.com" />
+            </label>
+            <label class="field labeled">
+              <span>パスワード</span>
+              <input class="focusable error-ring" type="password" value="123" />
+            </label>
+            <p class="status good-status">パスワードは8文字以上で入力してください</p>
+            <button class="primary-button">登録する</button>
+          </div>
+
+          <ul class="points">
+            <li>ラベルが常設され、入力中も意味が失われない</li>
+            <li>エラーが文言で説明され、色だけに依存しない</li>
+            <li>フォーカスや状態変化が視認しやすい前提になっている</li>
+          </ul>
+        </article>
+      </section>
     </main>
   </body>
 </html>

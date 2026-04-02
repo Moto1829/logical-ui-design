@@ -7,14 +7,56 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main class="placeholder-page">
-      <p class="eyebrow">UI Sample</p>
-      <h1>空状態の比較サンプル</h1>
-      <p>このページは記載場所を先に確保したサンプルです。今後、初回状態とデータなし状態の比較を追加します。</p>
-      <nav>
-        <a href="../../index.md">学習トップへ</a>
-        <a href="../index.md">サンプル一覧へ</a>
-      </nav>
+    <main class="page">
+      <header class="hero">
+        <p class="eyebrow">UI Sample</p>
+        <h1>空状態は次の行動を案内する</h1>
+        <p class="lead">
+          データがない状態では、何が起きているかより、次に何をすればよいかが重要です。
+        </p>
+        <nav class="page-nav" aria-label="ページナビゲーション">
+          <a href="../../index.html">学習トップへ</a>
+          <a href="../index.html">サンプル一覧へ</a>
+        </nav>
+      </header>
+
+      <section class="comparison">
+        <article class="card bad-example">
+          <span class="badge badge-bad">Bad</span>
+          <h2>悪い例</h2>
+          <p class="summary">何もないことだけを伝え、なぜ空なのか、何をすればよいかが分かりません。</p>
+
+          <div class="state-box vague">
+            <h3>案件一覧</h3>
+            <p class="empty-copy">データがありません</p>
+          </div>
+
+          <ul class="points">
+            <li>初回状態なのか検索結果ゼロなのか分からない</li>
+            <li>次に何をすればよいかが示されていない</li>
+            <li>画面が壊れているようにも見える</li>
+          </ul>
+        </article>
+
+        <article class="card good-example">
+          <span class="badge badge-good">Good</span>
+          <h2>良い例</h2>
+          <p class="summary">ここが何の画面かと、最初に何をすればよいかが明確に示されています。</p>
+
+          <div class="state-box guided">
+            <h3>案件一覧</h3>
+            <p class="empty-copy strong">まだ案件が登録されていません</p>
+            <p class="helper">最初の案件を追加すると、進行状況や担当者を一覧で管理できます。</p>
+            <button class="primary">最初の案件を追加する</button>
+          </div>
+
+          <ul class="points">
+            <li>画面の役割と状態が分かる</li>
+            <li>次の行動が1つに絞られていて迷いにくい</li>
+            <li>空状態を不安ではなく起点に変えている</li>
+          </ul>
+        </article>
+      </section>
     </main>
   </body>
 </html>

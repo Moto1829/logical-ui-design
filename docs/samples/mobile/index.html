@@ -7,14 +7,78 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main class="placeholder-page">
-      <p class="eyebrow">UI Sample</p>
-      <h1>モバイルUIの比較サンプル</h1>
-      <p>このページは記載場所を先に確保したサンプルです。今後、親指操作やモバイルフォームの比較を追加します。</p>
-      <nav>
-        <a href="../../index.md">学習トップへ</a>
-        <a href="../index.md">サンプル一覧へ</a>
-      </nav>
+    <main class="page">
+      <header class="hero">
+        <p class="eyebrow">UI Sample</p>
+        <h1>モバイルでは届くことと迷わないことが重要</h1>
+        <p class="lead">
+          狭い画面では、情報量よりも主要操作の位置と入力中の文脈維持が使いやすさを左右します。
+        </p>
+        <nav class="page-nav" aria-label="ページナビゲーション">
+          <a href="../../index.html">学習トップへ</a>
+          <a href="../index.html">サンプル一覧へ</a>
+        </nav>
+      </header>
+
+      <section class="comparison">
+        <article class="card bad-example">
+          <span class="badge badge-bad">Bad</span>
+          <h2>悪い例</h2>
+          <p class="summary">主要操作が上部に遠く、ラベルも薄く、入力中に文脈が失われます。</p>
+
+          <div class="phone-frame">
+            <div class="mobile-screen cramped">
+              <div class="top-bar">
+                <span>プロフィール編集</span>
+                <button class="tiny-button">保存</button>
+              </div>
+              <div class="field">
+                <input type="text" placeholder="名前" />
+              </div>
+              <div class="field">
+                <input type="email" placeholder="メールアドレス" />
+              </div>
+              <div class="keyboard-mask"></div>
+            </div>
+          </div>
+
+          <ul class="points">
+            <li>主要操作が親指で届きにくい位置にある</li>
+            <li>プレースホルダーだけで入力項目の意味が消える</li>
+            <li>キーボード表示後の操作導線が見えない</li>
+          </ul>
+        </article>
+
+        <article class="card good-example">
+          <span class="badge badge-good">Good</span>
+          <h2>良い例</h2>
+          <p class="summary">常設ラベルと下部CTAで、入力中でも意味と次の行動が失われません。</p>
+
+          <div class="phone-frame">
+            <div class="mobile-screen guided">
+              <div class="top-bar calm">
+                <span>プロフィール編集</span>
+                <span class="meta">入力中</span>
+              </div>
+              <label class="field labeled">
+                <span>名前</span>
+                <input type="text" value="山田 花子" />
+              </label>
+              <label class="field labeled">
+                <span>メールアドレス</span>
+                <input type="email" value="hanako@example.com" />
+              </label>
+              <div class="bottom-cta">変更を保存する</div>
+            </div>
+          </div>
+
+          <ul class="points">
+            <li>主要操作が下部にあり、片手で届きやすい</li>
+            <li>ラベルが残るため入力中も意味が分かる</li>
+            <li>最終操作が常に見えていて迷いにくい</li>
+          </ul>
+        </article>
+      </section>
     </main>
   </body>
 </html>
