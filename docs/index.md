@@ -1,10 +1,28 @@
----
-title: UIデザインを言語化する
----
-
 # UIデザインを言語化する
 
-このコンテンツは、UIデザインを感覚ではなく根拠で説明できるようにするための学習ノートです。
+<div class="hero-panel">
+	<p class="hero-eyebrow">Cognitive Psychology × Ergonomics × UI Design</p>
+	<h1>見た目の好みではなく、使いやすさの根拠でUIを説明する</h1>
+	<p class="hero-lead">この教材は、UIデザインを感覚論で終わらせず、認知心理学と人間工学を土台にして言語化できるようにするための学習ノートです。ユーザーが画面を見るときに起きている理解、判断、操作の流れを分解し、悪いUIがどこで負荷や不安を生むのかまで整理します。</p>
+	<div class="hero-actions">
+		<a class="md-button md-button--primary" href="01-foundations.html">基礎から読み始める</a>
+		<a class="md-button" href="samples/index.html">比較サンプルから入る</a>
+	</div>
+	<div class="hero-metrics">
+		<div>
+			<strong>17章</strong>
+			<span>基礎からレビューまで一通り学べる</span>
+		</div>
+		<div>
+			<strong>16サンプル</strong>
+			<span>悪い例と良い例を HTML/CSS で比較できる</span>
+		</div>
+		<div>
+			<strong>実務寄り</strong>
+			<span>フォーム、空状態、危険操作、レビューまでカバー</span>
+		</div>
+	</div>
+</div>
 
 見た目が整っていることは大切ですが、それだけでは十分ではありません。ユーザーは画面を鑑賞するのではなく、理解し、判断し、操作します。つまりUIデザインでは、次の3点を同時に考える必要があります。
 
@@ -12,15 +30,30 @@ title: UIデザインを言語化する
 - 迷わず選べること
 - 安心して操作できること
 
-そのために本コンテンツでは、認知心理学と人間工学を土台にして、UIがどうあるべきかを整理します。
-
 ## はじめての方へ
 
-最初に迷わないために、入口を3つに分けています。
-
-- 基礎から順に学ぶ: [第1章 UI設計の基礎](01-foundations.html) から読み進める
-- よくある実務テーマから入る: [フォームと入力UI](04-forms-and-inputs.html) や [状態変化とフィードバック](05-feedback-and-response.html) を先に読む
-- 画面比較から入る: [サンプル一覧](samples/index.html) から悪い例と良い例を見る
+<div class="link-grid two-up">
+	<a class="feature-card" href="01-foundations.html">
+		<span class="feature-card__label">王道ルート</span>
+		<strong>基礎から順に学ぶ</strong>
+		<p>第1章から読み進めて、知覚、レイアウト、フォーム、アクセシビリティへと順番に理解を積み上げます。</p>
+	</a>
+	<a class="feature-card" href="04-forms-and-inputs.html">
+		<span class="feature-card__label">実務優先</span>
+		<strong>よく触る UI から入る</strong>
+		<p>フォーム、フィードバック、空状態、エラー設計など、現場で崩れやすいテーマから先に見られます。</p>
+	</a>
+	<a class="feature-card" href="samples/index.html">
+		<span class="feature-card__label">比較学習</span>
+		<strong>サンプルで差分を見る</strong>
+		<p>悪い例でどこに負荷があるかを見つけてから、良い例で改善の考え方を確認できます。</p>
+	</a>
+	<a class="feature-card" href="review-template.html">
+		<span class="feature-card__label">レビュー支援</span>
+		<strong>観点をそのまま使う</strong>
+		<p>レビュー用テンプレートを使って、実案件の画面を根拠つきで評価できるようにします。</p>
+	</a>
+</div>
 
 ## この教材で身につくこと
 
@@ -31,6 +64,21 @@ title: UIデザインを言語化する
 3. レイアウト、文字、色、余白を根拠を持って扱えるようにする
 4. フォーム、ボタン、フィードバックなど具体的なUI部品に落とし込む
 5. アクセシビリティとレビュー観点まで含めて、自分で評価できるようにする
+
+<div class="link-grid three-up">
+	<div class="info-tile">
+		<strong>知覚の整理</strong>
+		<p>情報量ではなく、最初の数秒で何が見えるかを判断できるようになります。</p>
+	</div>
+	<div class="info-tile">
+		<strong>操作の設計</strong>
+		<p>ボタン、入力、フィードバックを、迷いと誤操作の観点から設計できます。</p>
+	</div>
+	<div class="info-tile">
+		<strong>レビューの言語化</strong>
+		<p>良し悪しを好みではなく、負荷、回復性、安心感で説明できるようになります。</p>
+	</div>
+</div>
 
 ## 対象読者
 
@@ -43,6 +91,35 @@ title: UIデザインを言語化する
 1. まずは[UI設計の基礎](01-foundations.html)を読む
 2. HTMLとCSSのサンプルを開いて、悪い例と良い例を比較する
 3. 実案件の画面に当てはめて、どの原則が崩れているかを確認する
+
+## まず開くとよいページ
+
+<div class="link-grid three-up compact-cards">
+	<a class="feature-card" href="01-foundations.html">
+		<strong>第1章 UI設計の基礎</strong>
+		<p>全体の土台を最短でつかむ入口です。</p>
+	</a>
+	<a class="feature-card" href="04-forms-and-inputs.html">
+		<strong>第4章 フォームと入力UI</strong>
+		<p>実務で最も差が出やすい入力体験を整理します。</p>
+	</a>
+	<a class="feature-card" href="11-error-permissions-timeouts.html">
+		<strong>第11章 失敗状態の設計</strong>
+		<p>エラー時にユーザーを詰ませない考え方を学べます。</p>
+	</a>
+	<a class="feature-card" href="15-accessibility-in-practice.html">
+		<strong>第15章 アクセシビリティ実践編</strong>
+		<p>実装レベルで見落としやすい改善点を確認できます。</p>
+	</a>
+	<a class="feature-card" href="17-review-case-study.html">
+		<strong>第17章 ケーススタディ</strong>
+		<p>レビュー観点をまとめて適用する練習に向いています。</p>
+	</a>
+	<a class="feature-card" href="samples/index.html">
+		<strong>サンプル一覧</strong>
+		<p>比較ベースで学ぶ人向けのショートカットです。</p>
+	</a>
+</div>
 
 ## 目的別の読み方
 
@@ -96,6 +173,23 @@ title: UIデザインを言語化する
 - 一覧や検索で情報整理に迷いやすい画面: [一覧画面の比較サンプル](samples/list-view/index.html)
 - 実務で崩れやすい失敗状態: [エラー状態の比較サンプル](samples/error-states/index.html)
 - レビューの言語化例を見たい場合: [UIレビューケースの比較サンプル](samples/review-case/index.html)
+
+## 迷ったときの見方
+
+<div class="callout-strip">
+	<div>
+		<strong>理解しにくい</strong>
+		<p>第2章と第3章を見て、視線誘導と情報のまとまりを確認します。</p>
+	</div>
+	<div>
+		<strong>操作しにくい</strong>
+		<p>第4章、第5章、第14章を見て、入力、反応、タッチ領域を確認します。</p>
+	</div>
+	<div>
+		<strong>失敗から戻れない</strong>
+		<p>第10章、第11章、第13章を見て、回復導線と安全策を確認します。</p>
+	</div>
+</div>
 
 ## 学習の前提
 

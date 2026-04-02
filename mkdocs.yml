@@ -1,0 +1,56 @@
+site_name: Logical UI Design
+site_description: 認知心理学と人間工学からUIデザインを学ぶ教材
+repo_name: logical-ui-design
+theme:
+  name: material
+  language: ja
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: blue grey
+      accent: indigo
+markdown_extensions:
+  - admonition
+  - attr_list
+  - tables
+  - toc:
+      permalink: true
+plugins:
+  - search
+extra_css:
+  - stylesheets/extra.css
+docs_dir: docs
+site_dir: site
+use_directory_urls: false
+nav:
+  - ホーム: index.md
+  - 基礎:
+      - 第1章 UI設計の基礎: 01-foundations.md
+      - 第2章 人はどう画面を認知するか: 02-perception-and-cognition.md
+      - 第3章 情報設計とレイアウト: 03-information-architecture-and-layout.md
+  - 主要UI:
+      - 第4章 フォームと入力UI: 04-forms-and-inputs.md
+      - 第5章 状態変化とフィードバック: 05-feedback-and-response.md
+      - 第6章 アクセシビリティとインクルーシブデザイン: 06-accessibility-and-inclusive-design.md
+      - 第7章 UIレビューの観点: 07-ui-review-checklist.md
+  - 応用テーマ:
+      - 第8章 ダッシュボードの情報優先順位: 08-dashboard-prioritization.md
+      - 第9章 テーブルとカードの使い分け: 09-table-vs-card.md
+      - 第10章 空状態と初回状態の設計: 10-empty-states.md
+      - 第11章 エラー、権限不足、タイムアウトの設計: 11-error-permissions-timeouts.md
+      - 第12章 オンボーディングと段階的開示: 12-onboarding-and-progressive-disclosure.md
+      - 第13章 危険操作と安全設計: 13-dangerous-actions.md
+      - 第14章 モバイルUIとタッチ操作: 14-mobile-ui-ergonomics.md
+      - 第15章 アクセシビリティ実践編: 15-accessibility-in-practice.md
+      - 第16章 UI文言設計: 16-ui-copywriting.md
+      - 第17章 UIレビューのケーススタディ: 17-review-case-study.md
+  - 補助資料:
+      - UIレビュー用テンプレート: review-template.md
+      - サンプル一覧: samples/index.md
