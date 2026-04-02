@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
+  background: #f7f5f1;
+  color: #1d1a16;
+}
+
+.placeholder-page {
+  max-width: 840px;
+  margin: 0 auto;
+  padding: 48px 20px 72px;
+}
+
+.eyebrow {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #1744b8;
+}
+
+nav {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+a {
+  display: inline-flex;
+  min-height: 40px;
+  align-items: center;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 1px solid #d9ccbb;
+  color: #1d1a16;
+  text-decoration: none;
+}

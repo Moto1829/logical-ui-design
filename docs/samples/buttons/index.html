@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ボタン優先順位の比較サンプル</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <p class="eyebrow">UI Sample</p>
+        <h1>ボタンの優先順位をどう見せるか</h1>
+        <p class="lead">
+          操作の重みが同じように見えると、ユーザーは自分で安全性と優先順位を判断しなければなりません。
+        </p>
+        <nav class="page-nav" aria-label="ページナビゲーション">
+          <a href="../../index.md">学習トップへ</a>
+          <a href="../index.md">サンプル一覧へ</a>
+        </nav>
+      </header>
+
+      <section class="comparison">
+        <article class="card bad-example">
+          <span class="badge badge-bad">Bad</span>
+          <h2>悪い例</h2>
+          <p class="summary">保存、下書き、削除が同じ強さで並び、危険操作も近すぎます。</p>
+
+          <div class="panel dense">
+            <div class="document">
+              <h3>記事設定</h3>
+              <p>タイトルや公開設定を編集できます。</p>
+            </div>
+            <div class="actions same-weight">
+              <button class="neutral">下書き保存</button>
+              <button class="neutral">公開</button>
+              <button class="neutral">削除</button>
+            </div>
+          </div>
+
+          <ul class="points">
+            <li>主要操作と破壊的操作の視覚差がない</li>
+            <li>すべて同じ優先度に見え、判断コストが高い</li>
+            <li>削除ボタンが近く、誤操作リスクが高い</li>
+          </ul>
+        </article>
+
+        <article class="card good-example">
+          <span class="badge badge-good">Good</span>
+          <h2>良い例</h2>
+          <p class="summary">主要操作を強調し、補助操作と危険操作を明確に分離しています。</p>
+
+          <div class="panel airy">
+            <div class="document">
+              <h3>記事設定</h3>
+              <p>変更内容を確認したうえで公開できます。削除は元に戻せません。</p>
+            </div>
+            <div class="actions grouped">
+              <div class="left-actions">
+                <button class="secondary">下書き保存</button>
+                <button class="secondary danger-subtle">削除</button>
+              </div>
+              <button class="primary">公開する</button>
+            </div>
+          </div>
+
+          <ul class="points">
+            <li>主要操作が一目で分かり、行動の軸がぶれない</li>
+            <li>危険操作が距離と色で分離され、誤操作しにくい</li>
+            <li>補助操作は使えるが主役になっていない</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

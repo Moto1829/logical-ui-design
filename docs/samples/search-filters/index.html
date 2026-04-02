@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>検索UIとフィルタUIの比較サンプル</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <p class="eyebrow">UI Sample</p>
+        <h1>検索とフィルタの役割を分ける</h1>
+        <p class="lead">
+          検索とフィルタは似ていますが役割が違います。両者が混ざると、ユーザーはどこから絞り込めばよいか迷います。
+        </p>
+        <nav class="page-nav" aria-label="ページナビゲーション">
+          <a href="../../index.md">学習トップへ</a>
+          <a href="../index.md">サンプル一覧へ</a>
+        </nav>
+      </header>
+
+      <section class="comparison">
+        <article class="card bad-example">
+          <span class="badge badge-bad">Bad</span>
+          <h2>悪い例</h2>
+          <p class="summary">入力欄、タグ、並び替え、絞り込みが一列に詰め込まれ、役割分担が不明です。</p>
+
+          <div class="panel compact">
+            <div class="cluster chaotic">
+              <input type="text" value="営業" aria-label="検索" />
+              <button class="flat">絞り込み</button>
+              <button class="flat">担当者</button>
+              <button class="flat">更新順</button>
+              <button class="flat">完了以外</button>
+              <button class="flat">タグあり</button>
+            </div>
+            <p class="hint">125件</p>
+          </div>
+
+          <ul class="points">
+            <li>検索語入力と条件指定の区別がつきにくい</li>
+            <li>どの条件が有効か一目で分からない</li>
+            <li>結果件数と条件変更の関係が見えにくい</li>
+          </ul>
+        </article>
+
+        <article class="card good-example">
+          <span class="badge badge-good">Good</span>
+          <h2>良い例</h2>
+          <p class="summary">検索、絞り込み、並び替えを分離し、現在の条件も明確に示しています。</p>
+
+          <div class="panel generous">
+            <div class="search-row">
+              <input type="text" value="営業" aria-label="キーワード検索" />
+              <button class="primary">検索する</button>
+            </div>
+            <div class="filter-row">
+              <div class="group">
+                <span class="label">状態</span>
+                <button class="chip active">完了以外</button>
+                <button class="chip">すべて</button>
+              </div>
+              <div class="group">
+                <span class="label">担当</span>
+                <button class="chip active">営業</button>
+                <button class="chip">全員</button>
+              </div>
+              <div class="group sort">
+                <span class="label">並び順</span>
+                <button class="chip">更新順</button>
+              </div>
+            </div>
+            <p class="hint strong">営業 / 完了以外 に一致する案件: 12件</p>
+          </div>
+
+          <ul class="points">
+            <li>検索と条件指定の役割が分かれている</li>
+            <li>現在の条件が見えるため、探索状態を把握しやすい</li>
+            <li>結果件数が条件の結果として理解しやすい</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

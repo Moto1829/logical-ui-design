@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>フィードバック設計の比較サンプル</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <p class="eyebrow">UI Sample</p>
+        <h1>状態変化をどう伝えるか</h1>
+        <p class="lead">
+          フィードバックが弱いと、押せたのか、保存できたのか、やり直せるのかが分かりません。
+        </p>
+        <nav class="page-nav" aria-label="ページナビゲーション">
+          <a href="../../index.md">学習トップへ</a>
+          <a href="../index.md">サンプル一覧へ</a>
+        </nav>
+      </header>
+
+      <section class="comparison">
+        <article class="card bad-example">
+          <span class="badge badge-bad">Bad</span>
+          <h2>悪い例</h2>
+          <p class="summary">読み込み、成功、失敗が曖昧で、次に何をすべきかが見えません。</p>
+
+          <div class="panel muted-panel">
+            <div class="toolbar">
+              <h3>プロフィール設定</h3>
+              <button class="flat">保存</button>
+            </div>
+            <div class="message weak">処理しています...</div>
+            <div class="message weak">保存しました</div>
+            <div class="message weak">エラーが発生しました</div>
+          </div>
+
+          <ul class="points">
+            <li>状態ごとの差が弱く、見分けにくい</li>
+            <li>失敗時に回復手段がなく、ユーザーが詰まる</li>
+            <li>成功後の次の行動が示されない</li>
+          </ul>
+        </article>
+
+        <article class="card good-example">
+          <span class="badge badge-good">Good</span>
+          <h2>良い例</h2>
+          <p class="summary">処理中、成功、失敗が区別され、それぞれで取るべき行動が分かります。</p>
+
+          <div class="panel strong-panel">
+            <div class="toolbar">
+              <h3>プロフィール設定</h3>
+              <button class="primary">保存する</button>
+            </div>
+            <div class="message loading">保存中です。完了まで数秒かかる場合があります。</div>
+            <div class="message success">保存しました。続けて公開設定を確認できます。</div>
+            <div class="message error">通信が不安定なため保存できませんでした。接続を確認して再試行してください。</div>
+            <div class="follow-up">
+              <button class="secondary">公開設定へ進む</button>
+              <button class="secondary">再試行する</button>
+            </div>
+          </div>
+
+          <ul class="points">
+            <li>状態ごとの差が色と文言の両方で伝わる</li>
+            <li>失敗時に次の手段があり、行き止まりにならない</li>
+            <li>完了後の次アクションが示され、文脈が続く</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

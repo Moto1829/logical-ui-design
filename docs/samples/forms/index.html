@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>フォームUI比較サンプル</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <p class="eyebrow">UI Sample</p>
+        <h1>会員登録フォームの比較</h1>
+        <p class="lead">
+          左は認知負荷が高く誤操作しやすい例、右は理解しやすく操作しやすい例です。
+        </p>
+        <nav class="page-nav" aria-label="ページナビゲーション">
+          <a href="../../index.md">学習トップへ</a>
+          <a href="../index.md">サンプル一覧へ</a>
+        </nav>
+      </header>
+
+      <section class="comparison">
+        <article class="card bad-example">
+          <div class="card-header">
+            <span class="badge badge-bad">Bad</span>
+            <h2>悪い例</h2>
+            <p>
+              ラベル不足、低コントラスト、情報の詰め込み、曖昧なCTAにより、入力の負荷が高い状態です。
+            </p>
+          </div>
+
+          <form class="sample-form cramped" action="#">
+            <div class="field">
+              <input type="text" placeholder="名前" />
+            </div>
+            <div class="field two-columns">
+              <input type="email" placeholder="mail" />
+              <input type="password" placeholder="pass" />
+            </div>
+            <div class="field">
+              <input type="text" placeholder="会社 / 部署 / 役職 / 任意" />
+            </div>
+            <div class="field">
+              <textarea rows="3" placeholder="要望や質問があれば入力"></textarea>
+            </div>
+            <label class="tiny-check">
+              <input type="checkbox" />
+              お知らせ
+            </label>
+            <div class="actions split-actions">
+              <button type="button" class="ghost">戻る</button>
+              <button type="submit" class="ghost emphasis-weak">送信</button>
+            </div>
+            <p class="error subtle">入力内容に問題があります</p>
+          </form>
+
+          <ul class="points">
+            <li>placeholderがラベルを兼ねており、入力開始後に文脈が消える</li>
+            <li>文字色と境界が弱く、どこが入力欄か瞬時に分かりにくい</li>
+            <li>主要操作が強調されず、どのボタンを押すべきか迷う</li>
+            <li>エラー理由が曖昧で、修正方法が分からない</li>
+          </ul>
+        </article>
+
+        <article class="card good-example">
+          <div class="card-header">
+            <span class="badge badge-good">Good</span>
+            <h2>良い例</h2>
+            <p>
+              ラベル、補助説明、グルーピング、明確なCTAにより、短時間で理解して操作できます。
+            </p>
+          </div>
+
+          <form class="sample-form spacious" action="#">
+            <fieldset>
+              <legend>基本情報</legend>
+              <div class="field">
+                <label for="name">氏名</label>
+                <input id="name" type="text" aria-describedby="name-help" />
+                <p id="name-help" class="helper">フルネームで入力してください</p>
+              </div>
+              <div class="field-grid">
+                <div class="field">
+                  <label for="email">メールアドレス</label>
+                  <input id="email" type="email" />
+                </div>
+                <div class="field">
+                  <label for="password">パスワード</label>
+                  <input id="password" type="password" aria-describedby="password-help" />
+                  <p id="password-help" class="helper">8文字以上で設定してください</p>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>任意項目</legend>
+              <div class="field">
+                <label for="company">会社・部署</label>
+                <input id="company" type="text" />
+              </div>
+              <div class="field">
+                <label for="message">相談内容</label>
+                <textarea id="message" rows="4"></textarea>
+              </div>
+            </fieldset>
+
+            <label class="check-row">
+              <input type="checkbox" />
+              新機能やイベントのお知らせを受け取る
+            </label>
+
+            <div class="actions">
+              <button type="button" class="secondary">あとで入力する</button>
+              <button type="submit" class="primary">登録する</button>
+            </div>
+
+            <p class="status">入力内容は自動保存されません。送信前に確認してください。</p>
+          </form>
+
+          <ul class="points">
+            <li>ラベルが常に見えるため、入力中でも意味を見失わない</li>
+            <li>fieldsetで情報が整理され、視線移動と理解の負荷が下がる</li>
+            <li>主要ボタンが一目で分かり、行動の優先順位が明確である</li>
+            <li>補助テキストが具体的で、入力の迷いを減らせる</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

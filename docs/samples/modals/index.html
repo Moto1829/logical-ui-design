@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>モーダル設計の比較サンプル</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <p class="eyebrow">UI Sample</p>
+        <h1>モーダルは本当に必要か</h1>
+        <p class="lead">
+          モーダルは強いUIです。文脈を中断させるため、閉じ方、優先度、操作結果が明確でないと使いにくくなります。
+        </p>
+        <nav class="page-nav" aria-label="ページナビゲーション">
+          <a href="../../index.md">学習トップへ</a>
+          <a href="../index.md">サンプル一覧へ</a>
+        </nav>
+      </header>
+
+      <section class="comparison">
+        <article class="card bad-example">
+          <span class="badge badge-bad">Bad</span>
+          <h2>悪い例</h2>
+          <p class="summary">閉じ方が曖昧で、主目的も分かりにくく、不要な入力を強いています。</p>
+
+          <div class="scene">
+            <div class="app-surface faint">
+              <h3>購入手続き</h3>
+              <p>配送方法の選択中</p>
+            </div>
+            <div class="modal crowded">
+              <h3>お知らせ</h3>
+              <p>新機能の案内、メール設定、アンケート、通知設定を確認してください。</p>
+              <input type="text" placeholder="メールアドレス" />
+              <div class="actions even">
+                <button class="flat">あとで</button>
+                <button class="flat">閉じる</button>
+                <button class="flat">保存</button>
+              </div>
+            </div>
+          </div>
+
+          <ul class="points">
+            <li>何のためのモーダルかが分かりにくい</li>
+            <li>閉じる、あとで、保存の違いが曖昧で迷う</li>
+            <li>元の作業を中断する必然性が弱い</li>
+          </ul>
+        </article>
+
+        <article class="card good-example">
+          <span class="badge badge-good">Good</span>
+          <h2>良い例</h2>
+          <p class="summary">重要確認だけに絞り、主操作と閉じ方を明確にしています。</p>
+
+          <div class="scene">
+            <div class="app-surface clear">
+              <h3>購入手続き</h3>
+              <p>配送方法の選択中</p>
+            </div>
+            <div class="modal focused">
+              <div class="modal-head">
+                <h3>配送先を変更しますか</h3>
+                <button class="icon-button" aria-label="閉じる">×</button>
+              </div>
+              <p>編集中の内容は保存されません。現在の配送先を破棄して、新しい配送先を選び直します。</p>
+              <div class="actions split">
+                <button class="secondary">キャンセル</button>
+                <button class="primary">変更する</button>
+              </div>
+            </div>
+          </div>
+
+          <ul class="points">
+            <li>中断理由が明確で、モーダルを出す必然性がある</li>
+            <li>閉じる方法と主操作が明確で、判断しやすい</li>
+            <li>操作結果が事前に説明され、不安が少ない</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>一覧画面の比較サンプル</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <p class="eyebrow">UI Sample</p>
+        <h1>一覧画面は何を比較させるのか</h1>
+        <p class="lead">
+          一覧画面では、情報密度そのものより、比較のしやすさと次の行動の見つけやすさが重要です。
+        </p>
+        <nav class="page-nav" aria-label="ページナビゲーション">
+          <a href="../../index.md">学習トップへ</a>
+          <a href="../index.md">サンプル一覧へ</a>
+        </nav>
+      </header>
+
+      <section class="comparison">
+        <article class="card bad-example">
+          <span class="badge badge-bad">Bad</span>
+          <h2>悪い例</h2>
+          <p class="summary">情報の階層が弱く、状態、重要度、次の行動が一目で分かりません。</p>
+
+          <div class="list-panel dense">
+            <div class="row heading weak-grid">
+              <span>案件</span>
+              <span>担当</span>
+              <span>状態</span>
+              <span>更新</span>
+              <span>操作</span>
+            </div>
+            <div class="row weak-grid">
+              <span>コーポレートサイト更新</span>
+              <span>佐藤</span>
+              <span>確認中</span>
+              <span>4/2 10:11</span>
+              <span>詳細 編集</span>
+            </div>
+            <div class="row weak-grid">
+              <span>会員登録導線改善</span>
+              <span>田中</span>
+              <span>要対応</span>
+              <span>4/1 16:48</span>
+              <span>詳細 編集</span>
+            </div>
+            <div class="row weak-grid">
+              <span>管理画面改修</span>
+              <span>山口</span>
+              <span>完了</span>
+              <span>3/31 18:02</span>
+              <span>詳細 編集</span>
+            </div>
+          </div>
+
+          <ul class="points">
+            <li>状態の強弱がなく、緊急度を見分けにくい</li>
+            <li>各行で何を見ればよいか視線の起点が定まらない</li>
+            <li>操作がテキストの一部に埋もれ、行動しにくい</li>
+          </ul>
+        </article>
+
+        <article class="card good-example">
+          <span class="badge badge-good">Good</span>
+          <h2>良い例</h2>
+          <p class="summary">比較すべき情報を強調し、状態と操作がひと目で見つかる構成です。</p>
+
+          <div class="list-panel spacious">
+            <div class="toolbar">
+              <h3>進行中の案件</h3>
+              <button class="primary">新規案件を追加</button>
+            </div>
+            <div class="item-row">
+              <div class="main-info">
+                <p class="title">会員登録導線改善</p>
+                <p class="meta">担当: 田中 ・ 最終更新: 4/1 16:48</p>
+              </div>
+              <span class="status alert">要対応</span>
+              <button class="secondary">詳細を見る</button>
+            </div>
+            <div class="item-row">
+              <div class="main-info">
+                <p class="title">コーポレートサイト更新</p>
+                <p class="meta">担当: 佐藤 ・ 最終更新: 4/2 10:11</p>
+              </div>
+              <span class="status info">確認中</span>
+              <button class="secondary">詳細を見る</button>
+            </div>
+            <div class="item-row">
+              <div class="main-info">
+                <p class="title">管理画面改修</p>
+                <p class="meta">担当: 山口 ・ 最終更新: 3/31 18:02</p>
+              </div>
+              <span class="status done">完了</span>
+              <button class="secondary">詳細を見る</button>
+            </div>
+          </div>
+
+          <ul class="points">
+            <li>案件名、状態、次操作の順で視線が流れやすい</li>
+            <li>比較に必要な情報だけが整理されている</li>
+            <li>状態差が色とラベルで明確に伝わる</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
