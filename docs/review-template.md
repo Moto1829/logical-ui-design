@@ -72,6 +72,6 @@
 
 ## ナビゲーション
 
-- [前へ: 第7章 UIレビューの観点](07-ui-review-checklist.html)
-- [目次に戻る](index.html)
-- [サンプル一覧へ](samples/index.html)
+- [前へ: 第7章 UIレビューの観点](07-ui-review-checklist.md)
+- [目次に戻る](index.md)
+- [サンプル一覧へ](samples/index.md)

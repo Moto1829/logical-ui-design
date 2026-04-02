@@ -102,6 +102,6 @@ UIが分かりにくい原因は、個々のパーツではなく、画面全体
 
 ## ナビゲーション
 
-- [前へ: 第2章 人はどう画面を認知するか](02-perception-and-cognition.html)
-- [目次に戻る](index.html)
-- [次へ: 第4章 フォームと入力UI](04-forms-and-inputs.html)
+- [前へ: 第2章 人はどう画面を認知するか](02-perception-and-cognition.md)
+- [目次に戻る](index.md)
+- [次へ: 第4章 フォームと入力UI](04-forms-and-inputs.md)

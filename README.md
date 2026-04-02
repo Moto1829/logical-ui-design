@@ -57,6 +57,8 @@
 
 GitHub Pages は GitHub Actions でデプロイする前提にしています。`mkdocs-material` で `docs` 配下をビルドして公開するため、章一覧、検索、サイドナビゲーション付きのドキュメントサイトとして配信されます。
 
+このリポジトリは [mkdocs.yml](https://github.com/Moto1829/logical-ui-design/blob/main/mkdocs.yml) で Material テーマを使う設定になっているため、GitHub Pages の公開元はブランチではなく `GitHub Actions` にする必要があります。`main` ブランチの `docs/` をそのまま Pages 公開にすると、MkDocs のテーマは適用されず、Markdown を素の状態で配信する構成になります。
+
 公開時の想定手順:
 
 1. GitHub の `Settings > Pages` を開く

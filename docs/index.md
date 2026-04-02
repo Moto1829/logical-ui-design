@@ -5,8 +5,8 @@
 	<h1>見た目の好みではなく、使いやすさの根拠でUIを説明する</h1>
 	<p class="hero-lead">この教材は、UIデザインを感覚論で終わらせず、認知心理学と人間工学を土台にして言語化できるようにするための学習ノートです。ユーザーが画面を見るときに起きている理解、判断、操作の流れを分解し、悪いUIがどこで負荷や不安を生むのかまで整理します。</p>
 	<div class="hero-actions">
-		<a class="md-button md-button--primary" href="01-foundations.html">基礎から読み始める</a>
-		<a class="md-button" href="samples/index.html">比較サンプルから入る</a>
+		<a class="md-button md-button--primary" href="01-foundations.md">基礎から読み始める</a>
+		<a class="md-button" href="samples/index.md">比較サンプルから入る</a>
 	</div>
 	<div class="hero-metrics">
 		<div>
@@ -33,22 +33,22 @@
 ## はじめての方へ
 
 <div class="link-grid two-up">
-	<a class="feature-card" href="01-foundations.html">
+	<a class="feature-card" href="01-foundations.md">
 		<span class="feature-card__label">王道ルート</span>
 		<strong>基礎から順に学ぶ</strong>
 		<p>第1章から読み進めて、知覚、レイアウト、フォーム、アクセシビリティへと順番に理解を積み上げます。</p>
 	</a>
-	<a class="feature-card" href="04-forms-and-inputs.html">
+	<a class="feature-card" href="04-forms-and-inputs.md">
 		<span class="feature-card__label">実務優先</span>
 		<strong>よく触る UI から入る</strong>
 		<p>フォーム、フィードバック、空状態、エラー設計など、現場で崩れやすいテーマから先に見られます。</p>
 	</a>
-	<a class="feature-card" href="samples/index.html">
+	<a class="feature-card" href="samples/index.md">
 		<span class="feature-card__label">比較学習</span>
 		<strong>サンプルで差分を見る</strong>
 		<p>悪い例でどこに負荷があるかを見つけてから、良い例で改善の考え方を確認できます。</p>
 	</a>
-	<a class="feature-card" href="review-template.html">
+	<a class="feature-card" href="review-template.md">
 		<span class="feature-card__label">レビュー支援</span>
 		<strong>観点をそのまま使う</strong>
 		<p>レビュー用テンプレートを使って、実案件の画面を根拠つきで評価できるようにします。</p>
@@ -88,34 +88,34 @@
 
 ## 読み進め方
 
-1. まずは[UI設計の基礎](01-foundations.html)を読む
+1. まずは[UI設計の基礎](01-foundations.md)を読む
 2. HTMLとCSSのサンプルを開いて、悪い例と良い例を比較する
 3. 実案件の画面に当てはめて、どの原則が崩れているかを確認する
 
 ## まず開くとよいページ
 
 <div class="link-grid three-up compact-cards">
-	<a class="feature-card" href="01-foundations.html">
+	<a class="feature-card" href="01-foundations.md">
 		<strong>第1章 UI設計の基礎</strong>
 		<p>全体の土台を最短でつかむ入口です。</p>
 	</a>
-	<a class="feature-card" href="04-forms-and-inputs.html">
+	<a class="feature-card" href="04-forms-and-inputs.md">
 		<strong>第4章 フォームと入力UI</strong>
 		<p>実務で最も差が出やすい入力体験を整理します。</p>
 	</a>
-	<a class="feature-card" href="11-error-permissions-timeouts.html">
+	<a class="feature-card" href="11-error-permissions-timeouts.md">
 		<strong>第11章 失敗状態の設計</strong>
 		<p>エラー時にユーザーを詰ませない考え方を学べます。</p>
 	</a>
-	<a class="feature-card" href="15-accessibility-in-practice.html">
+	<a class="feature-card" href="15-accessibility-in-practice.md">
 		<strong>第15章 アクセシビリティ実践編</strong>
 		<p>実装レベルで見落としやすい改善点を確認できます。</p>
 	</a>
-	<a class="feature-card" href="17-review-case-study.html">
+	<a class="feature-card" href="17-review-case-study.md">
 		<strong>第17章 ケーススタディ</strong>
 		<p>レビュー観点をまとめて適用する練習に向いています。</p>
 	</a>
-	<a class="feature-card" href="samples/index.html">
+	<a class="feature-card" href="samples/index.md">
 		<strong>サンプル一覧</strong>
 		<p>比較ベースで学ぶ人向けのショートカットです。</p>
 	</a>
@@ -125,44 +125,44 @@
 
 ### まずは基礎を固めたい
 
-1. [第1章 UI設計の基礎](01-foundations.html)
-2. [第2章 人はどう画面を認知するか](02-perception-and-cognition.html)
-3. [第3章 情報設計とレイアウト](03-information-architecture-and-layout.html)
+1. [第1章 UI設計の基礎](01-foundations.md)
+2. [第2章 人はどう画面を認知するか](02-perception-and-cognition.md)
+3. [第3章 情報設計とレイアウト](03-information-architecture-and-layout.md)
 
 ### 実務でよく触るUIから見たい
 
-1. [第4章 フォームと入力UI](04-forms-and-inputs.html)
-2. [第5章 状態変化とフィードバック](05-feedback-and-response.html)
-3. [第10章 空状態と初回状態の設計](10-empty-states.html)
-4. [第11章 エラー、権限不足、タイムアウトの設計](11-error-permissions-timeouts.html)
+1. [第4章 フォームと入力UI](04-forms-and-inputs.md)
+2. [第5章 状態変化とフィードバック](05-feedback-and-response.md)
+3. [第10章 空状態と初回状態の設計](10-empty-states.md)
+4. [第11章 エラー、権限不足、タイムアウトの設計](11-error-permissions-timeouts.md)
 
 ### レビュー観点を先に持ちたい
 
-1. [第6章 アクセシビリティとインクルーシブデザイン](06-accessibility-and-inclusive-design.html)
-2. [第7章 UIレビューの観点](07-ui-review-checklist.html)
-3. [第17章 UIレビューのケーススタディ](17-review-case-study.html)
-4. [UIレビュー用テンプレート](review-template.html)
+1. [第6章 アクセシビリティとインクルーシブデザイン](06-accessibility-and-inclusive-design.md)
+2. [第7章 UIレビューの観点](07-ui-review-checklist.md)
+3. [第17章 UIレビューのケーススタディ](17-review-case-study.md)
+4. [UIレビュー用テンプレート](review-template.md)
 
 ## 順番に読む
 
-1. [第1章 UI設計の基礎](01-foundations.html)
-2. [第2章 人はどう画面を認知するか](02-perception-and-cognition.html)
-3. [第3章 情報設計とレイアウト](03-information-architecture-and-layout.html)
-4. [第4章 フォームと入力UI](04-forms-and-inputs.html)
-5. [第5章 状態変化とフィードバック](05-feedback-and-response.html)
-6. [第6章 アクセシビリティとインクルーシブデザイン](06-accessibility-and-inclusive-design.html)
-7. [第7章 UIレビューの観点](07-ui-review-checklist.html)
-8. [第8章 ダッシュボードの情報優先順位](08-dashboard-prioritization.html)
-9. [第9章 テーブルとカードの使い分け](09-table-vs-card.html)
-10. [第10章 空状態と初回状態の設計](10-empty-states.html)
-11. [第11章 エラー、権限不足、タイムアウトの設計](11-error-permissions-timeouts.html)
-12. [第12章 オンボーディングと段階的開示](12-onboarding-and-progressive-disclosure.html)
-13. [第13章 危険操作と安全設計](13-dangerous-actions.html)
-14. [第14章 モバイルUIとタッチ操作](14-mobile-ui-ergonomics.html)
-15. [第15章 アクセシビリティ実践編](15-accessibility-in-practice.html)
-16. [第16章 UI文言設計](16-ui-copywriting.html)
-17. [第17章 UIレビューのケーススタディ](17-review-case-study.html)
-18. [UIレビュー用テンプレート](review-template.html)
+1. [第1章 UI設計の基礎](01-foundations.md)
+2. [第2章 人はどう画面を認知するか](02-perception-and-cognition.md)
+3. [第3章 情報設計とレイアウト](03-information-architecture-and-layout.md)
+4. [第4章 フォームと入力UI](04-forms-and-inputs.md)
+5. [第5章 状態変化とフィードバック](05-feedback-and-response.md)
+6. [第6章 アクセシビリティとインクルーシブデザイン](06-accessibility-and-inclusive-design.md)
+7. [第7章 UIレビューの観点](07-ui-review-checklist.md)
+8. [第8章 ダッシュボードの情報優先順位](08-dashboard-prioritization.md)
+9. [第9章 テーブルとカードの使い分け](09-table-vs-card.md)
+10. [第10章 空状態と初回状態の設計](10-empty-states.md)
+11. [第11章 エラー、権限不足、タイムアウトの設計](11-error-permissions-timeouts.md)
+12. [第12章 オンボーディングと段階的開示](12-onboarding-and-progressive-disclosure.md)
+13. [第13章 危険操作と安全設計](13-dangerous-actions.md)
+14. [第14章 モバイルUIとタッチ操作](14-mobile-ui-ergonomics.md)
+15. [第15章 アクセシビリティ実践編](15-accessibility-in-practice.md)
+16. [第16章 UI文言設計](16-ui-copywriting.md)
+17. [第17章 UIレビューのケーススタディ](17-review-case-study.md)
+18. [UIレビュー用テンプレート](review-template.md)
 
 ## サンプルから入る
 
@@ -204,25 +204,25 @@ UIデザインの評価軸は、単に美しいかどうかではありません
 
 ## 収録コンテンツ
 
-- [第1章 UI設計の基礎](01-foundations.html)
-- [第2章 人はどう画面を認知するか](02-perception-and-cognition.html)
-- [第3章 情報設計とレイアウト](03-information-architecture-and-layout.html)
-- [第4章 フォームと入力UI](04-forms-and-inputs.html)
-- [第5章 状態変化とフィードバック](05-feedback-and-response.html)
-- [第6章 アクセシビリティとインクルーシブデザイン](06-accessibility-and-inclusive-design.html)
-- [第7章 UIレビューの観点](07-ui-review-checklist.html)
-- [第8章 ダッシュボードの情報優先順位](08-dashboard-prioritization.html)
-- [第9章 テーブルとカードの使い分け](09-table-vs-card.html)
-- [第10章 空状態と初回状態の設計](10-empty-states.html)
-- [第11章 エラー、権限不足、タイムアウトの設計](11-error-permissions-timeouts.html)
-- [第12章 オンボーディングと段階的開示](12-onboarding-and-progressive-disclosure.html)
-- [第13章 危険操作と安全設計](13-dangerous-actions.html)
-- [第14章 モバイルUIとタッチ操作](14-mobile-ui-ergonomics.html)
-- [第15章 アクセシビリティ実践編](15-accessibility-in-practice.html)
-- [第16章 UI文言設計](16-ui-copywriting.html)
-- [第17章 UIレビューのケーススタディ](17-review-case-study.html)
-- [UIレビュー用テンプレート](review-template.html)
-- [サンプル一覧](samples/index.html)
+- [第1章 UI設計の基礎](01-foundations.md)
+- [第2章 人はどう画面を認知するか](02-perception-and-cognition.md)
+- [第3章 情報設計とレイアウト](03-information-architecture-and-layout.md)
+- [第4章 フォームと入力UI](04-forms-and-inputs.md)
+- [第5章 状態変化とフィードバック](05-feedback-and-response.md)
+- [第6章 アクセシビリティとインクルーシブデザイン](06-accessibility-and-inclusive-design.md)
+- [第7章 UIレビューの観点](07-ui-review-checklist.md)
+- [第8章 ダッシュボードの情報優先順位](08-dashboard-prioritization.md)
+- [第9章 テーブルとカードの使い分け](09-table-vs-card.md)
+- [第10章 空状態と初回状態の設計](10-empty-states.md)
+- [第11章 エラー、権限不足、タイムアウトの設計](11-error-permissions-timeouts.md)
+- [第12章 オンボーディングと段階的開示](12-onboarding-and-progressive-disclosure.md)
+- [第13章 危険操作と安全設計](13-dangerous-actions.md)
+- [第14章 モバイルUIとタッチ操作](14-mobile-ui-ergonomics.md)
+- [第15章 アクセシビリティ実践編](15-accessibility-in-practice.md)
+- [第16章 UI文言設計](16-ui-copywriting.md)
+- [第17章 UIレビューのケーススタディ](17-review-case-study.md)
+- [UIレビュー用テンプレート](review-template.md)
+- [サンプル一覧](samples/index.md)
 - [フォームUIの比較サンプル](samples/forms/index.html)
 
 ## 主要サンプルへの近道
@@ -261,6 +261,6 @@ UIデザインの評価軸は、単に美しいかどうかではありません
 
 ## 補助リンク
 
-- [サンプル一覧](samples/index.html)
-- [UIレビュー用テンプレート](review-template.html)
-- [第8章以降を読む](08-dashboard-prioritization.html)
+- [サンプル一覧](samples/index.md)
+- [UIレビュー用テンプレート](review-template.md)
+- [第8章以降を読む](08-dashboard-prioritization.md)

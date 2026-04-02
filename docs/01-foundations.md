@@ -96,5 +96,5 @@ UIが悪いと、このどこかで余計な負荷が発生します。つまり
 
 ## ナビゲーション
 
-- [目次に戻る](index.html)
-- [次へ: 第2章 人はどう画面を認知するか](02-perception-and-cognition.html)
+- [目次に戻る](index.md)
+- [次へ: 第2章 人はどう画面を認知するか](02-perception-and-cognition.md)

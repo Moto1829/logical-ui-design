@@ -110,6 +110,6 @@ placeholderをラベル代わりに使うと、入力開始後に項目の意味
 
 ## ナビゲーション
 
-- [前へ: 第3章 情報設計とレイアウト](03-information-architecture-and-layout.html)
-- [目次に戻る](index.html)
-- [次へ: 第5章 状態変化とフィードバック](05-feedback-and-response.html)
+- [前へ: 第3章 情報設計とレイアウト](03-information-architecture-and-layout.md)
+- [目次に戻る](index.md)
+- [次へ: 第5章 状態変化とフィードバック](05-feedback-and-response.md)

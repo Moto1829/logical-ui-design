@@ -97,6 +97,6 @@
 
 ## ナビゲーション
 
-- [前へ: 第9章 テーブルとカードの使い分け](09-table-vs-card.html)
-- [目次に戻る](index.html)
-- [次へ: 第11章 エラー、権限不足、タイムアウトの設計](11-error-permissions-timeouts.html)
+- [前へ: 第9章 テーブルとカードの使い分け](09-table-vs-card.md)
+- [目次に戻る](index.md)
+- [次へ: 第11章 エラー、権限不足、タイムアウトの設計](11-error-permissions-timeouts.md)

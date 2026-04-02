@@ -114,6 +114,6 @@
 
 ## ナビゲーション
 
-- [前へ: 第5章 状態変化とフィードバック](05-feedback-and-response.html)
-- [目次に戻る](index.html)
-- [次へ: 第7章 UIレビューの観点](07-ui-review-checklist.html)
+- [前へ: 第5章 状態変化とフィードバック](05-feedback-and-response.md)
+- [目次に戻る](index.md)
+- [次へ: 第7章 UIレビューの観点](07-ui-review-checklist.md)

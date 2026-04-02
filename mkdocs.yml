@@ -1,6 +1,8 @@
 site_name: Logical UI Design
 site_description: 認知心理学と人間工学からUIデザインを学ぶ教材
 repo_name: logical-ui-design
+repo_url: https://github.com/Moto1829/logical-ui-design
+site_url: https://Moto1829.github.io/logical-ui-design/
 theme:
   name: material
   language: ja

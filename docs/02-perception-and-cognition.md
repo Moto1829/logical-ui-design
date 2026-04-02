@@ -139,6 +139,6 @@ UIで意識すべきこと:
 
 ## ナビゲーション
 
-- [前へ: 第1章 UI設計の基礎](01-foundations.html)
-- [目次に戻る](index.html)
-- [次へ: 第3章 情報設計とレイアウト](03-information-architecture-and-layout.html)
+- [前へ: 第1章 UI設計の基礎](01-foundations.md)
+- [目次に戻る](index.md)
+- [次へ: 第3章 情報設計とレイアウト](03-information-architecture-and-layout.md)

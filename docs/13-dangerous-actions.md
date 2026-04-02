@@ -97,6 +97,6 @@
 
 ## ナビゲーション
 
-- [前へ: 第12章 オンボーディングと段階的開示](12-onboarding-and-progressive-disclosure.html)
-- [目次に戻る](index.html)
-- [次へ: 第14章 モバイルUIとタッチ操作](14-mobile-ui-ergonomics.html)
+- [前へ: 第12章 オンボーディングと段階的開示](12-onboarding-and-progressive-disclosure.md)
+- [目次に戻る](index.md)
+- [次へ: 第14章 モバイルUIとタッチ操作](14-mobile-ui-ergonomics.md)

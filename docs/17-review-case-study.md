@@ -94,6 +94,6 @@ UIレビューで難しいのは、違和感を感じることではなく、そ
 
 ## ナビゲーション
 
-- [前へ: 第16章 UI文言設計](16-ui-copywriting.html)
-- [目次に戻る](index.html)
-- [UIレビュー用テンプレートへ](review-template.html)
+- [前へ: 第16章 UI文言設計](16-ui-copywriting.md)
+- [目次に戻る](index.md)
+- [UIレビュー用テンプレートへ](review-template.md)

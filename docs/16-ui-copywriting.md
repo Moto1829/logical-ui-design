@@ -105,6 +105,6 @@ UIにおける文言は、装飾ではなく操作の一部です。どのボタ
 
 ## ナビゲーション
 
-- [前へ: 第15章 アクセシビリティ実践編](15-accessibility-in-practice.html)
-- [目次に戻る](index.html)
-- [次へ: 第17章 UIレビューのケーススタディ](17-review-case-study.html)
+- [前へ: 第15章 アクセシビリティ実践編](15-accessibility-in-practice.md)
+- [目次に戻る](index.md)
+- [次へ: 第17章 UIレビューのケーススタディ](17-review-case-study.md)

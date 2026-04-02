@@ -151,10 +151,10 @@ UIレビューで重要なのは、好みの表明ではなく、問題を説明
 
 ## 関連資料
 
-- [UIレビュー用テンプレート](review-template.html)
+- [UIレビュー用テンプレート](review-template.md)
 
 ## ナビゲーション
 
-- [前へ: 第6章 アクセシビリティとインクルーシブデザイン](06-accessibility-and-inclusive-design.html)
-- [目次に戻る](index.html)
-- [次へ: UIレビュー用テンプレート](review-template.html)
+- [前へ: 第6章 アクセシビリティとインクルーシブデザイン](06-accessibility-and-inclusive-design.md)
+- [目次に戻る](index.md)
+- [次へ: UIレビュー用テンプレート](review-template.md)

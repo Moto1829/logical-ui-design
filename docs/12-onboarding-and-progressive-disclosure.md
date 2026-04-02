@@ -95,6 +95,6 @@
 
 ## ナビゲーション
 
-- [前へ: 第11章 エラー、権限不足、タイムアウトの設計](11-error-permissions-timeouts.html)
-- [目次に戻る](index.html)
-- [次へ: 第13章 危険操作と安全設計](13-dangerous-actions.html)
+- [前へ: 第11章 エラー、権限不足、タイムアウトの設計](11-error-permissions-timeouts.md)
+- [目次に戻る](index.md)
+- [次へ: 第13章 危険操作と安全設計](13-dangerous-actions.md)

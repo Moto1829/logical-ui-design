@@ -103,6 +103,6 @@
 
 ## ナビゲーション
 
-- [前へ: 第10章 空状態と初回状態の設計](10-empty-states.html)
-- [目次に戻る](index.html)
-- [次へ: 第12章 オンボーディングと段階的開示](12-onboarding-and-progressive-disclosure.html)
+- [前へ: 第10章 空状態と初回状態の設計](10-empty-states.md)
+- [目次に戻る](index.md)
+- [次へ: 第12章 オンボーディングと段階的開示](12-onboarding-and-progressive-disclosure.md)

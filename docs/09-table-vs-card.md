@@ -101,6 +101,6 @@
 
 ## ナビゲーション
 
-- [前へ: 第8章 ダッシュボードの情報優先順位](08-dashboard-prioritization.html)
-- [目次に戻る](index.html)
-- [次へ: 第10章 空状態と初回状態の設計](10-empty-states.html)
+- [前へ: 第8章 ダッシュボードの情報優先順位](08-dashboard-prioritization.md)
+- [目次に戻る](index.md)
+- [次へ: 第10章 空状態と初回状態の設計](10-empty-states.md)

@@ -89,6 +89,6 @@
 
 ## ナビゲーション
 
-- [前へ: 第13章 危険操作と安全設計](13-dangerous-actions.html)
-- [目次に戻る](index.html)
-- [次へ: 第15章 アクセシビリティ実践編](15-accessibility-in-practice.html)
+- [前へ: 第13章 危険操作と安全設計](13-dangerous-actions.md)
+- [目次に戻る](index.md)
+- [次へ: 第15章 アクセシビリティ実践編](15-accessibility-in-practice.md)

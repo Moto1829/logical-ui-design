@@ -93,6 +93,6 @@
 
 ## ナビゲーション
 
-- [前へ: 第14章 モバイルUIとタッチ操作](14-mobile-ui-ergonomics.html)
-- [目次に戻る](index.html)
-- [次へ: 第16章 UI文言設計](16-ui-copywriting.html)
+- [前へ: 第14章 モバイルUIとタッチ操作](14-mobile-ui-ergonomics.md)
+- [目次に戻る](index.md)
+- [次へ: 第16章 UI文言設計](16-ui-copywriting.md)
