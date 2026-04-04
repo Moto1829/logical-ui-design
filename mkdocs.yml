@@ -26,6 +26,10 @@ markdown_extensions:
       permalink: true
 plugins:
   - search
+extra:
+  analytics:
+    provider: google
+    property: G-30CNQ76VER
 extra_css:
   - stylesheets/extra.css
 docs_dir: docs
