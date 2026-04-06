@@ -4,13 +4,13 @@
 [![GitHub Pages](https://img.shields.io/badge/site-GitHub%20Pages-0f172a)](https://Moto1829.github.io/logical-ui-design/)
 [![MkDocs Material](https://img.shields.io/badge/docs-MkDocs%20Material-4051b5)](https://squidfunk.github.io/mkdocs-material/)
 
-認知心理学と人間工学を土台に、UI デザインを感覚論ではなく言語化して学ぶための教材です。
+認知心理学と人間工学を土台に、UI デザインを感覚や好みに頼りすぎず、判断根拠として言語化して学ぶための教材です。
 
-「なんとなく見た目がいい」ではなく、なぜその UI が理解しやすく、迷いにくく、操作しやすいのかを説明できるようにすることを目的にしています。Markdown の解説記事と、HTML/CSS の比較サンプルを組み合わせて構成しています。
+見た目の印象だけで UI を評価するのではなく、なぜその UI が理解しやすく、迷いにくく、操作しやすいのかを説明できるようになることを目指しています。内容は、Markdown による解説記事と、HTML/CSS の比較サンプルを組み合わせて構成しています。
 
 公開サイト: https://Moto1829.github.io/logical-ui-design/
 
-## このリポジトリで扱うこと
+## このリポジトリで学べること
 
 - 認知負荷、視線誘導、一貫性といった UI 設計の基本
 - フォーム、フィードバック、空状態、失敗状態、危険操作の設計
@@ -21,7 +21,7 @@
 
 - 見た目の好みではなく、判断根拠で UI を説明する構成
 - 章ごとの解説と比較サンプルを行き来しやすい設計
-- GitHub Pages でそのまま公開できる MkDocs 構成
+- GitHub Actions から GitHub Pages へ公開しやすい MkDocs 構成
 - MkDocs Material を使った検索付きドキュメントサイト
 
 ## こんな人向け
@@ -33,9 +33,10 @@
 
 ## 読みはじめ方
 
-- 基礎から読む: [docs/01-foundations.md](docs/01-foundations.md)
-- サンプルから入る: [docs/samples/index.md](docs/samples/index.md)
-- レビュー観点を先に見る: [docs/07-ui-review-checklist.md](docs/07-ui-review-checklist.md)
+- 基礎から体系的に読みたい人: [docs/01-foundations.md](docs/01-foundations.md) から順に読む
+- 実例を先に見たい人: [docs/samples/index.md](docs/samples/index.md) から比較サンプルを見る
+- レビュー観点を整理したい人: [docs/07-ui-review-checklist.md](docs/07-ui-review-checklist.md) から読む
+- 実務で崩れやすいテーマを先に見たい人: フォームなら第4章、失敗状態なら第11章、危険操作なら第13章から読む
 
 代表的な比較サンプル:
 
@@ -44,7 +45,7 @@
 - エラー状態: [docs/samples/error-states/index.html](docs/samples/error-states/index.html)
 - UI レビューケース: [docs/samples/review-case/index.html](docs/samples/review-case/index.html)
 
-## 収録テーマ
+## 章構成
 
 - UI 設計の基礎
 - 人はどう画面を認知するか
@@ -69,6 +70,7 @@
 前提:
 
 - Python 3.12 以上を推奨
+- 必要な依存関係は [requirements-docs.txt](requirements-docs.txt) で管理
 
 手順:
 
@@ -85,10 +87,11 @@
 
 - HTML サンプルは MkDocs サイト内のサンプル一覧から辿れます
 - 個別に確認したい場合は `docs/samples/.../index.html` を直接開いても確認できます
+- 生成物の [site](site) はビルド結果です。通常は [docs](docs) と [mkdocs.yml](mkdocs.yml) を編集します
 
 ## GitHub Pages で公開する
 
-このリポジトリは GitHub Actions 経由で GitHub Pages にデプロイする前提です。`docs/` をそのままブランチ公開するのではなく、MkDocs でビルドした静的サイトを Actions から配信します。
+このリポジトリは GitHub Actions 経由で GitHub Pages にデプロイする前提です。[docs](docs) をそのままブランチ公開するのではなく、MkDocs でビルドした静的サイトを Actions から配信します。
 
 理由:
 
@@ -123,7 +126,13 @@ docs/
 mkdocs.yml                       サイト設定
 requirements-docs.txt            ドキュメント生成用依存関係
 .github/workflows/deploy-pages.yml GitHub Pages デプロイ設定
+site/                            MkDocs のビルド生成物
 ```
+
+補足:
+
+- 通常の編集対象は [docs](docs) と [mkdocs.yml](mkdocs.yml) です
+- [site](site) はビルド結果のため、手動編集は基本的に想定しません
 
 ## 技術構成
 
