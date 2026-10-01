@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI機能の比較サンプル</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <p class="eyebrow">UI Sample</p>
+        <h1>AIの出力を、確認して使える形で見せる</h1>
+        <p class="lead">
+          AIの出力は正しいとは限りません。完成品のように見せるか、確認して使う下書きとして見せるかで、誤りが広がるかどうかが変わります。
+        </p>
+        <nav class="page-nav" aria-label="ページナビゲーション">
+          <a href="../../index.html">学習トップへ</a>
+          <a href="../index.html">サンプル一覧へ</a>
+        </nav>
+      </header>
+
+      <section class="comparison">
+        <article class="card bad-example">
+          <span class="badge badge-bad">Bad</span>
+          <h2>悪い例</h2>
+          <p class="summary">要約が本文と同じ見た目で自動挿入され、根拠も取り消し手段もありません。</p>
+
+          <div class="panel">
+            <h3>週次定例 議事録</h3>
+            <p class="doc-text">
+              今週の決定事項: 新料金プランを11月1日に公開する。担当は営業部。問い合わせ対応の体制は現行のまま維持する。
+            </p>
+            <p class="doc-text">参加者: 佐藤、田中、鈴木</p>
+            <div class="ask-row">
+              <input type="text" placeholder="何でも聞いてください" aria-label="AIへの依頼" />
+            </div>
+          </div>
+
+          <ul class="points">
+            <li>1段落目がAIの要約だと分からず、確認されないまま共有される</li>
+            <li>何をもとに要約したのか、確かめる手がかりがない</li>
+            <li>「何でも聞いてください」では、何を頼めるのか分からない</li>
+          </ul>
+        </article>
+
+        <article class="card good-example">
+          <span class="badge badge-good">Good</span>
+          <h2>良い例</h2>
+          <p class="summary">要約を下書きとして区別し、根拠、採用、再生成、依頼の例を示しています。</p>
+
+          <div class="panel">
+            <h3>週次定例 議事録</h3>
+            <div class="ai-draft" aria-label="AIによる要約の下書き">
+              <p class="ai-label">✦ AIによる要約の下書き<span>内容を確認してから追加してください</span></p>
+              <ul class="ai-body">
+                <li>新料金プランを11月1日に公開する（担当: 営業部）<a href="#" class="cite">議事録 12行目</a></li>
+                <li>問い合わせ対応の体制は現行のまま維持する<a href="#" class="cite">議事録 31行目</a></li>
+              </ul>
+              <p class="ai-scope">対象: この議事録（2,340文字）。添付の資料1件は読み取れませんでした。</p>
+              <div class="ai-actions">
+                <button class="primary small">本文に追加</button>
+                <button class="secondary small">編集して追加</button>
+                <button class="secondary small">再生成</button>
+                <button class="ghost small">破棄</button>
+              </div>
+            </div>
+            <div class="ask-row">
+              <input type="text" placeholder="例: 決定事項と担当者を表にまとめて" aria-label="AIへの依頼" />
+            </div>
+            <div class="chips" aria-label="依頼の候補">
+              <button class="chip">要点を3行で</button>
+              <button class="chip">次のアクションを抜き出す</button>
+              <button class="chip">参加者向けのメール文にする</button>
+            </div>
+          </div>
+
+          <ul class="points">
+            <li>AIの出力が下書きとして区別され、確認が必要なことがその場で分かる</li>
+            <li>各要点に元の行へのリンクがあり、対象範囲と読めなかった部分も示されている</li>
+            <li>採用、編集、再生成、破棄を選べ、依頼の具体例も示されている</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

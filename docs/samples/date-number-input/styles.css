@@ -1,0 +1,281 @@
+:root {
+  --bg: #f4f0e8;
+  --surface: rgba(255, 252, 246, 0.94);
+  --line: #dacdb8;
+  --text: #1d1a16;
+  --muted: #675f57;
+  --primary: #165dff;
+  --primary-strong: #0f43b0;
+  --danger: #b53a2e;
+  --danger-soft: #f7ded8;
+  --good: #166447;
+  --good-soft: #dceee4;
+  --shadow: 0 20px 42px rgba(40, 31, 20, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top right, rgba(252, 205, 140, 0.28), transparent 24%),
+    linear-gradient(180deg, #faf7f1 0%, var(--bg) 100%);
+}
+
+.page {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 44px 20px 72px;
+}
+
+.hero {
+  margin-bottom: 28px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  color: var(--primary-strong);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+}
+
+.lead,
+.summary,
+.document p {
+  line-height: 1.75;
+  color: var(--muted);
+}
+
+.page-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.page-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid var(--line);
+  color: var(--text);
+  text-decoration: none;
+}
+
+.comparison {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.card {
+  padding: 24px;
+  border-radius: 24px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.badge-bad {
+  background: var(--danger-soft);
+  color: var(--danger);
+}
+
+.badge-good {
+  background: var(--good-soft);
+  color: var(--good);
+}
+
+.panel {
+  margin-top: 18px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: #fffdfa;
+}
+
+.panel {
+  padding: 18px;
+}
+
+.panel h3 {
+  margin: 0 0 6px;
+  font-size: 1.3rem;
+}
+
+.panel p {
+  margin: 0;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+button {
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: 999px;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+.primary {
+  background: linear-gradient(135deg, var(--primary), var(--primary-strong));
+  color: #fff;
+  font-weight: 700;
+}
+
+.secondary {
+  background: #ece5d9;
+  color: var(--text);
+}
+
+.neutral {
+  background: #ede7dc;
+  color: #5d564e;
+}
+
+.points {
+  margin: 18px 0 0;
+  padding-left: 20px;
+  line-height: 1.8;
+}
+
+@media (max-width: 860px) {
+  .comparison {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 32px 16px 56px;
+  }
+}
+
+.field {
+  margin: 0 0 16px;
+  padding: 0;
+  border: none;
+}
+
+.field label,
+.field legend {
+  display: block;
+  margin-bottom: 6px;
+  padding: 0;
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+
+.field input {
+  width: 100%;
+  min-height: 42px;
+  padding: 0 12px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: #fff;
+  font: inherit;
+}
+
+.field input.is-error {
+  border-color: var(--danger);
+}
+
+.panel .error-text {
+  margin-top: 4px;
+  color: var(--danger);
+  font-size: 0.84rem;
+}
+
+.panel .hint {
+  margin-top: 4px;
+  font-size: 0.84rem;
+}
+
+.calendar {
+  width: 240px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+  font-size: 0.84rem;
+}
+
+.cal-head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  text-align: center;
+  color: var(--muted);
+}
+
+.ymd {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ymd input {
+  width: 5em;
+}
+
+.ymd input + span {
+  margin-right: 6px;
+}
+
+.with-unit {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.with-unit input {
+  text-align: right;
+}
+
+.unit {
+  flex: none;
+  font-weight: 700;
+}
+
+.panel .deadline {
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: #f7f3ec;
+  color: var(--text);
+  font-size: 0.88rem;
+}

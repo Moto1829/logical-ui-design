@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>認知の原則の比較サンプル</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <p class="eyebrow">UI Sample</p>
+        <h1>近接、再認、フィッツの法則を画面で確かめる</h1>
+        <p class="lead">
+          知覚と認知の原則は、法則名を覚えるためではなく、画面のどこで迷いが生まれるかを説明するためにあります。同じ配送先の入力画面で比べます。
+        </p>
+        <nav class="page-nav" aria-label="ページナビゲーション">
+          <a href="../../index.html">学習トップへ</a>
+          <a href="../index.html">サンプル一覧へ</a>
+        </nav>
+      </header>
+
+      <section class="comparison">
+        <article class="card bad-example">
+          <span class="badge badge-bad">Bad</span>
+          <h2>悪い例</h2>
+          <p class="summary">ラベルの位置があいまいで、アイコンだけの操作があり、確定ボタンが小さく遠くにあります。</p>
+
+          <div class="panel">
+            <h3>配送先</h3>
+            <div class="loose">
+              <span class="lbl">郵便番号</span>
+              <input type="text" aria-label="郵便番号" />
+              <span class="lbl">住所</span>
+              <input type="text" aria-label="住所" />
+            </div>
+            <div class="icon-row" aria-hidden="true">
+              <span class="icon-btn">⟲</span><span class="icon-btn">☆</span><span class="icon-btn">⌫</span>
+            </div>
+            <div class="far-row">
+              <a href="#" class="tiny-link">確定</a>
+            </div>
+          </div>
+
+          <ul class="points">
+            <li>ラベルが上下の入力欄と同じ距離にあり、どちらの欄のものか分からない（近接）</li>
+            <li>アイコンだけのボタンは、意味を思い出す負担を課す（再認と再生）</li>
+            <li>主要な操作が小さな文字リンクで、右端の遠くにある（フィッツの法則）</li>
+          </ul>
+        </article>
+
+        <article class="card good-example">
+          <span class="badge badge-good">Good</span>
+          <h2>良い例</h2>
+          <p class="summary">ラベルを入力欄に近づけ、候補を見て選べるようにし、主要な操作を大きく近くに置いています。</p>
+
+          <div class="panel">
+            <h3>配送先</h3>
+            <div class="tight">
+              <label for="p-zip">郵便番号</label>
+              <input id="p-zip" type="text" inputmode="numeric" autocomplete="postal-code" value="150-0001" />
+            </div>
+            <div class="tight">
+              <label for="p-addr">住所</label>
+              <input id="p-addr" type="text" autocomplete="street-address" value="東京都渋谷区神宮前" />
+              <p class="hint">郵便番号から自動で入力しました</p>
+            </div>
+            <p class="recent-title">最近使った配送先</p>
+            <div class="recent">
+              <button class="chip">自宅（渋谷区神宮前）</button>
+              <button class="chip">勤務先（千代田区丸の内）</button>
+            </div>
+            <button class="primary wide">この住所に届ける</button>
+          </div>
+
+          <ul class="points">
+            <li>ラベルが自分の入力欄の真上に近く置かれ、まとまりが一目で分かる</li>
+            <li>最近の配送先を見て選べるので、住所を思い出して入力しなくてよい</li>
+            <li>主要な操作が幅の広いボタンで、入力の流れの終点にある</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

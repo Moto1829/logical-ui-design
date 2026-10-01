@@ -69,6 +69,62 @@
           </ul>
         </article>
       </section>
+
+      <section class="try" aria-labelledby="try-title">
+        <h2 id="try-title">操作して比べる</h2>
+        <p class="summary">保存ボタンを押して、反応の違いを確かめてください。保存には2秒かかる設定です。</p>
+        <label class="try-option"><input type="checkbox" id="fail" /> 通信を失敗させる</label>
+        <div class="try-grid">
+          <article class="card">
+            <span class="badge badge-bad">Bad</span>
+            <div class="try-box" id="fb-bad">
+              <button class="flat" type="button">保存</button>
+              <p class="try-status weak-text"></p>
+            </div>
+          </article>
+          <article class="card">
+            <span class="badge badge-good">Good</span>
+            <div class="try-box" id="fb-good">
+              <button class="primary" type="button">保存する</button>
+              <div class="try-status" role="status"></div>
+            </div>
+          </article>
+        </div>
+      </section>
     </main>
+    <script>
+      (function () {
+        var fail = document.getElementById("fail");
+
+        var bad = document.getElementById("fb-bad");
+        bad.querySelector("button").addEventListener("click", function () {
+          var out = bad.querySelector(".try-status");
+          out.textContent = "";
+          setTimeout(function () {
+            out.textContent = fail.checked ? "エラーが発生しました" : "保存しました";
+          }, 2000);
+        });
+
+        var good = document.getElementById("fb-good");
+        var btn = good.querySelector("button");
+        var out = good.querySelector(".try-status");
+        function save() {
+          btn.disabled = true;
+          btn.textContent = "保存中…";
+          out.innerHTML = '<div class="message loading">保存中です。完了まで数秒かかる場合があります。</div>';
+          setTimeout(function () {
+            btn.disabled = false;
+            btn.textContent = "保存する";
+            if (fail.checked) {
+              out.innerHTML = '<div class="message error">通信が不安定なため保存できませんでした。入力内容は残っています。</div><button class="secondary" type="button" data-retry>もう一度保存する</button>';
+              out.querySelector("[data-retry]").addEventListener("click", save);
+            } else {
+              out.innerHTML = '<div class="message success">保存しました。</div><button class="secondary" type="button">公開設定へ進む</button>';
+            }
+          }, 2000);
+        }
+        btn.addEventListener("click", save);
+      })();
+    </script>
   </body>
 </html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>設定画面の比較サンプル</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <p class="eyebrow">UI Sample</p>
+        <h1>設定がいつ、誰に反映されるかを見せる</h1>
+        <p class="lead">
+          設定画面はたまにしか開かれません。分類、反映のタイミング、影響の範囲が見えないと、変更が失われたり、意図しない人に影響したりします。
+        </p>
+        <nav class="page-nav" aria-label="ページナビゲーション">
+          <a href="../../index.html">学習トップへ</a>
+          <a href="../index.html">サンプル一覧へ</a>
+        </nav>
+      </header>
+
+      <section class="comparison">
+        <article class="card bad-example">
+          <span class="badge badge-bad">Bad</span>
+          <h2>悪い例</h2>
+          <p class="summary">分類があいまいで、スイッチも保存ボタンが必要。チームの削除が同じ並びにあります。</p>
+
+          <div class="panel settings">
+            <nav class="side" aria-label="設定の分類">
+              <a href="#">一般</a>
+              <a href="#" class="active">詳細</a>
+              <a href="#">その他</a>
+            </nav>
+            <div class="content">
+              <div class="row"><span>メール通知</span><span class="switch on" aria-hidden="true"></span></div>
+              <div class="row"><span>既定の言語</span><span class="select">日本語 ▾</span></div>
+              <div class="row"><span>チームを削除</span><button class="neutral small">削除</button></div>
+              <div class="save-row"><button class="neutral small">保存</button></div>
+            </div>
+          </div>
+
+          <ul class="points">
+            <li>「詳細」「その他」では、どこに何があるか予測できない</li>
+            <li>スイッチなのに保存が必要で、変更が反映されたか分からない</li>
+            <li>言語が自分だけかチーム全体か分からず、削除も通常の項目と並んでいる</li>
+          </ul>
+        </article>
+
+        <article class="card good-example">
+          <span class="badge badge-good">Good</span>
+          <h2>良い例</h2>
+          <p class="summary">目的で分類し、即時反映の項目と範囲の違う項目を分け、危険操作を独立させています。</p>
+
+          <div class="panel settings">
+            <nav class="side" aria-label="設定の分類">
+              <a href="#" class="active">通知</a>
+              <a href="#">表示と言語</a>
+              <a href="#">ログインとセキュリティ</a>
+              <a href="#">チームの管理</a>
+            </nav>
+            <div class="content">
+              <p class="group-title">あなたの通知</p>
+              <div class="row">
+                <span>メール通知<small>自分へのメンションと期限の通知</small></span>
+                <span class="switch on" role="switch" aria-checked="true" aria-label="メール通知"></span>
+              </div>
+              <p class="saved" role="status">✓ 保存しました</p>
+              <p class="group-title">チーム全体の設定 <span class="scope">メンバー全員に反映</span></p>
+              <div class="row">
+                <span>チームの既定の言語<small>既定値: 日本語</small></span>
+                <span class="select">日本語 ▾</span>
+              </div>
+              <section class="danger-zone">
+                <p class="group-title danger">危険な操作</p>
+                <p class="danger-text">チームを削除すると、すべてのプロジェクトが削除されます。元に戻せません。</p>
+                <button class="danger-outline small">チームを削除する…</button>
+              </section>
+            </div>
+          </div>
+
+          <ul class="points">
+            <li>分類名が目的の言葉になっていて、久しぶりでも探せる</li>
+            <li>スイッチは即時反映で、反映されたことが知らされる</li>
+            <li>チーム全体に影響する設定と危険な操作が、見出しで分けられている</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

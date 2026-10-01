@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ダークパターンの比較サンプル</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <p class="eyebrow">UI Sample</p>
+        <h1>ユーザーの判断を助けるか、ゆがめるか</h1>
+        <p class="lead">
+          強調、既定値、文言は、ユーザーを助けるためにも、望まない選択をさせるためにも使えます。同じ購入確認の画面で比べます。
+        </p>
+        <nav class="page-nav" aria-label="ページナビゲーション">
+          <a href="../../index.html">学習トップへ</a>
+          <a href="../index.html">サンプル一覧へ</a>
+        </nav>
+      </header>
+
+      <section class="comparison">
+        <article class="card bad-example">
+          <span class="badge badge-bad">Bad</span>
+          <h2>悪い例</h2>
+          <p class="summary">有料オプションが最初から選択済みで、断る選択肢は恥をかかせる文言の薄いリンクです。</p>
+
+          <div class="panel">
+            <p class="urgency">⏰ 残り 04:59 でこの価格は終了します</p>
+            <h3>ご注文の確認</h3>
+            <label class="option">
+              <input type="checkbox" checked />
+              <span>安心サポート（月額 480円）</span>
+            </label>
+            <label class="option">
+              <input type="checkbox" checked />
+              <span>お得な情報をメールで受け取る</span>
+            </label>
+            <p class="total">合計 3,980円<span class="fineprint">※別途手数料</span></p>
+            <div class="actions stacked">
+              <button class="primary">今すぐ購入する</button>
+              <a href="#" class="shame-link">いいえ、損をしても構いません</a>
+            </div>
+          </div>
+
+          <ul class="points">
+            <li>費用のかかるオプションとメール配信が、既定で選択されている</li>
+            <li>根拠のない残り時間の表示で、判断を急がせている</li>
+            <li>手数料の金額が分からず、断る選択肢は責める文言になっている</li>
+          </ul>
+        </article>
+
+        <article class="card good-example">
+          <span class="badge badge-good">Good</span>
+          <h2>良い例</h2>
+          <p class="summary">オプションは未選択から始め、費用の内訳を判断の前に示しています。</p>
+
+          <div class="panel">
+            <h3>ご注文の確認</h3>
+            <label class="option">
+              <input type="checkbox" />
+              <span>安心サポートを追加する（月額 480円・いつでも解約可）</span>
+            </label>
+            <label class="option">
+              <input type="checkbox" />
+              <span>新商品のお知らせをメールで受け取る</span>
+            </label>
+            <dl class="breakdown">
+              <div><dt>商品代金</dt><dd>3,980円</dd></div>
+              <div><dt>送料・手数料</dt><dd>330円</dd></div>
+              <div class="sum"><dt>お支払い合計</dt><dd>4,310円</dd></div>
+            </dl>
+            <div class="actions">
+              <button class="secondary">カートに戻る</button>
+              <button class="primary">4,310円を支払う</button>
+            </div>
+          </div>
+
+          <ul class="points">
+            <li>追加の費用や個人情報の提供は、ユーザーが自分で選んだときだけ有効になる</li>
+            <li>支払う総額が、確定の前に内訳つきで分かる</li>
+            <li>戻る選択肢も同じボタン形式で、責める言葉を使っていない</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

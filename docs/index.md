@@ -10,16 +10,16 @@
 	</div>
 	<div class="hero-metrics">
 		<div>
-			<strong>21章</strong>
+			<strong>32章</strong>
 			<span>基礎からレビューまで一通り学べる</span>
 		</div>
 		<div>
-			<strong>16サンプル</strong>
-			<span>悪い例と良い例を HTML/CSS で比較できる</span>
+			<strong>29サンプル</strong>
+			<span>悪い例と良い例を比較し、一部は操作して確かめられる</span>
 		</div>
 		<div>
 			<strong>実務寄り</strong>
-			<span>フォーム、空状態、危険操作、レビューまでカバー</span>
+			<span>全章に判断の分かれ目、レビュー例、演習を収録</span>
 		</div>
 	</div>
 </div>
@@ -137,13 +137,18 @@
 4. [第20章 検索とフィルタの設計](20-search-and-filters.md)
 5. [第10章 空状態と初回状態の設計](10-empty-states.md)
 6. [第11章 エラー、権限不足、タイムアウトの設計](11-error-permissions-timeouts.md)
+7. [第22章 待ち時間と読み込みの設計](22-loading-and-waiting.md)
+8. [第23章 一覧の操作設計](23-list-operations.md)
 
 ### レビュー観点を先に持ちたい
 
 1. [第6章 アクセシビリティとインクルーシブデザイン](06-accessibility-and-inclusive-design.md)
 2. [第7章 UIレビューの観点](07-ui-review-checklist.md)
 3. [第17章 UIレビューのケーススタディ](17-review-case-study.md)
-4. [UIレビュー用テンプレート](review-template.md)
+4. [第26章 ダークパターンと倫理的なUI](26-dark-patterns-and-ethics.md)
+5. [アンチパターン集](anti-patterns.md)
+6. [ユーザビリティテストの簡易手順](usability-testing.md)
+7. [UIレビュー用テンプレート](review-template.md)
 
 ## 順番に読む
 
@@ -168,7 +173,18 @@
 19. [第19章 モーダルと割り込みの設計](19-modals-and-interruption.md)
 20. [第20章 検索とフィルタの設計](20-search-and-filters.md)
 21. [第21章 ナビゲーションと画面遷移](21-navigation-and-wayfinding.md)
-22. [UIレビュー用テンプレート](review-template.md)
+22. [第22章 待ち時間と読み込みの設計](22-loading-and-waiting.md)
+23. [第23章 一覧の操作設計](23-list-operations.md)
+24. [第24章 複数ステップの入力設計](24-multi-step-forms.md)
+25. [第25章 通知とメッセージの階層](25-notifications-and-messages.md)
+26. [第26章 ダークパターンと倫理的なUI](26-dark-patterns-and-ethics.md)
+27. [第27章 AI機能のUI設計](27-ai-features.md)
+28. [第28章 設定画面の設計](28-settings-screens.md)
+29. [第29章 一貫性とデザインシステム](29-consistency-and-design-systems.md)
+30. [第30章 データ可視化の基礎](30-data-visualization.md)
+31. [第31章 日付、時刻、数値の入力](31-date-time-number-input.md)
+32. [第32章 モーションとアニメーション](32-motion-and-animation.md)
+33. [UIレビュー用テンプレート](review-template.md)
 
 ## サンプルから入る
 
@@ -231,7 +247,21 @@ UIデザインの評価軸は、単に美しいかどうかではありません
 - [第19章 モーダルと割り込みの設計](19-modals-and-interruption.md)
 - [第20章 検索とフィルタの設計](20-search-and-filters.md)
 - [第21章 ナビゲーションと画面遷移](21-navigation-and-wayfinding.md)
+- [第22章 待ち時間と読み込みの設計](22-loading-and-waiting.md)
+- [第23章 一覧の操作設計](23-list-operations.md)
+- [第24章 複数ステップの入力設計](24-multi-step-forms.md)
+- [第25章 通知とメッセージの階層](25-notifications-and-messages.md)
+- [第26章 ダークパターンと倫理的なUI](26-dark-patterns-and-ethics.md)
+- [第27章 AI機能のUI設計](27-ai-features.md)
+- [第28章 設定画面の設計](28-settings-screens.md)
+- [第29章 一貫性とデザインシステム](29-consistency-and-design-systems.md)
+- [第30章 データ可視化の基礎](30-data-visualization.md)
+- [第31章 日付、時刻、数値の入力](31-date-time-number-input.md)
+- [第32章 モーションとアニメーション](32-motion-and-animation.md)
 - [UIレビュー用テンプレート](review-template.md)
+- [原則と用語の索引](glossary.md)
+- [アンチパターン集](anti-patterns.md)
+- [ユーザビリティテストの簡易手順](usability-testing.md)
 - [サンプル一覧](samples/index.md)
 - [フォームUIの比較サンプル](samples/forms/index.html)
 
@@ -262,15 +292,35 @@ UIデザインの評価軸は、単に美しいかどうかではありません
 - 第15章: [アクセシビリティ実践サンプル](samples/accessibility/index.html)
 - 第16章: [UI文言設計の比較サンプル](samples/copywriting/index.html)
 - 第17章: [UIレビューケースの比較サンプル](samples/review-case/index.html)
+- 第22章: [待ち時間と読み込みの比較サンプル](samples/loading/index.html)
+- 第23章: [一覧操作の比較サンプル](samples/list-operations/index.html)
+- 第24章: [複数ステップ入力の比較サンプル](samples/wizard/index.html)
+- 第25章: [通知とメッセージの比較サンプル](samples/notifications/index.html)
+- 第26章: [ダークパターンの比較サンプル](samples/dark-patterns/index.html)
+- 第27章: [AI機能の比較サンプル](samples/ai-features/index.html)
+- 第28章: [設定画面の比較サンプル](samples/settings/index.html)
+- 第29章: [一貫性の比較サンプル](samples/consistency/index.html)
+- 第30章: [データ可視化の比較サンプル](samples/data-visualization/index.html)
+- 第31章: [日付・数値入力の比較サンプル](samples/date-number-input/index.html)
+- 第32章: [モーションの比較サンプル](samples/motion/index.html)
+- 第2章: [認知の原則の比較サンプル](samples/perception/index.html)
+- 第21章: [ナビゲーションの比較サンプル](samples/navigation/index.html)
 
-## 次に深められる内容
+## 各章の使い方
 
-- 章ごとのチェックリスト拡充
-- 実案件ベースのケーススタディ追加
-- GitHub Pages向けの見た目と導線の最終調整
+第1章から第32章までの各章の末尾には、次の3つを収録しています。
+
+- 迷いやすい判断: 原則どうしがぶつかる場面での判断の目安
+- レビューコメントの例: その章の観点で書いた、根拠つきの指摘文
+- 演習: 画面の状況から問題点と改善案を考える問題（解答例は折りたたみで表示）
+
+レビューの場で症状から章を探したいときは[アンチパターン集](anti-patterns.md)を、法則や用語の意味を確かめたいときは[原則と用語の索引](glossary.md)を使ってください。
 
 ## 補助リンク
 
 - [サンプル一覧](samples/index.md)
+- [原則と用語の索引](glossary.md)
+- [アンチパターン集](anti-patterns.md)
+- [ユーザビリティテストの簡易手順](usability-testing.md)
 - [UIレビュー用テンプレート](review-template.md)
 - [第8章以降を読む](08-dashboard-prioritization.md)

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>待ち時間と読み込みの比較サンプル</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <p class="eyebrow">UI Sample</p>
+        <h1>待っている間に何を見せるか</h1>
+        <p class="lead">
+          処理時間が同じでも、何が起きているかが見えるかどうかで、ユーザーの不安と誤操作の量は大きく変わります。
+        </p>
+        <nav class="page-nav" aria-label="ページナビゲーション">
+          <a href="../../index.html">学習トップへ</a>
+          <a href="../index.html">サンプル一覧へ</a>
+        </nav>
+      </header>
+
+      <section class="comparison">
+        <article class="card bad-example">
+          <span class="badge badge-bad">Bad</span>
+          <h2>悪い例</h2>
+          <p class="summary">画面全体を膜で覆い、中央のスピナーだけで待たせています。</p>
+
+          <div class="panel screen">
+            <div class="overlay" aria-hidden="true">
+              <span class="spinner"></span>
+              <span class="overlay-text">読み込み中...</span>
+            </div>
+            <h3>請求書一覧</h3>
+            <div class="blank-row"></div>
+            <div class="blank-row"></div>
+            <div class="blank-row"></div>
+            <div class="export-row">
+              <button class="neutral">CSVを出力</button>
+            </div>
+          </div>
+
+          <ul class="points">
+            <li>何が読み込まれ、どんな画面になるのか予測できない</li>
+            <li>画面全体が止まり、関係のない操作までできない</li>
+            <li>出力ボタンに処理中の表示がなく、二重に押されやすい</li>
+          </ul>
+        </article>
+
+        <article class="card good-example">
+          <span class="badge badge-good">Good</span>
+          <h2>良い例</h2>
+          <p class="summary">見出しと操作は先に表示し、読み込み中の範囲だけをスケルトン表示にしています。</p>
+
+          <div class="panel screen">
+            <h3>請求書一覧</h3>
+            <div class="skeleton-row" aria-hidden="true">
+              <span class="sk sk-short"></span><span class="sk sk-long"></span><span class="sk sk-mid"></span>
+            </div>
+            <div class="skeleton-row" aria-hidden="true">
+              <span class="sk sk-short"></span><span class="sk sk-long"></span><span class="sk sk-mid"></span>
+            </div>
+            <div class="skeleton-row" aria-hidden="true">
+              <span class="sk sk-short"></span><span class="sk sk-long"></span><span class="sk sk-mid"></span>
+            </div>
+            <p class="sr-status" role="status">請求書を読み込んでいます</p>
+            <div class="export-row">
+              <button class="secondary" disabled aria-disabled="true">CSVを出力中…</button>
+            </div>
+            <div class="progress-block">
+              <div class="progress-label">
+                <span>CSVを作成しています</span>
+                <span>420 / 1,200件</span>
+              </div>
+              <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="1200" aria-valuenow="420" aria-label="CSV作成の進み具合">
+                <span style="width: 35%"></span>
+              </div>
+              <p class="progress-note">画面を移動しても作成は続きます。完了したら通知でお知らせします。</p>
+            </div>
+          </div>
+
+          <ul class="points">
+            <li>表示される一覧の形が先に分かり、読み込み後もレイアウトがずれない</li>
+            <li>件数が分かる処理はプログレスバーで進み具合を示している</li>
+            <li>長い処理は画面に拘束せず、完了を後から知らせている</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

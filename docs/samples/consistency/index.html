@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>一貫性の比較サンプル</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <p class="eyebrow">UI Sample</p>
+        <h1>同じ意味のものを、同じ見た目と言葉にそろえる</h1>
+        <p class="lead">
+          画面ごとに見た目や言葉が少しずつ違うと、ユーザーは画面を開くたびに使い方を学び直すことになります。同じサービスの2つの画面を並べて比べます。
+        </p>
+        <nav class="page-nav" aria-label="ページナビゲーション">
+          <a href="../../index.html">学習トップへ</a>
+          <a href="../index.html">サンプル一覧へ</a>
+        </nav>
+      </header>
+
+      <section class="comparison">
+        <article class="card bad-example">
+          <span class="badge badge-bad">Bad</span>
+          <h2>悪い例</h2>
+          <p class="summary">同じ青のボタンが保存にも削除にも使われ、日付や用語も画面ごとに違います。</p>
+
+          <div class="screens">
+            <div class="panel mini">
+              <p class="screen-name">案件一覧</p>
+              <div class="item"><span>A社 リニューアル</span><span class="date">10/1</span></div>
+              <div class="item"><span>B社 保守契約</span><span class="date">9/28</span></div>
+              <div class="acts"><button class="blue-square">削除</button></div>
+            </div>
+            <div class="panel mini">
+              <p class="screen-name">プロジェクト詳細</p>
+              <p class="kv">更新日: 2026年9月28日</p>
+              <div class="acts">
+                <button class="blue-pill">保存</button>
+                <button class="gray-square">中止</button>
+              </div>
+            </div>
+          </div>
+
+          <ul class="points">
+            <li>同じ青が削除と保存の両方に使われ、主要な操作と危険な操作の区別がつかない</li>
+            <li>「案件」と「プロジェクト」、「10/1」と「2026年9月28日」が混在している</li>
+            <li>ボタンの角の形が画面ごとに違い、同じ部品だと認識しにくい</li>
+          </ul>
+        </article>
+
+        <article class="card good-example">
+          <span class="badge badge-good">Good</span>
+          <h2>良い例</h2>
+          <p class="summary">役割ごとに決めた共通部品と、共通の用語・日付表記を使っています。</p>
+
+          <div class="screens">
+            <div class="panel mini">
+              <p class="screen-name">案件一覧</p>
+              <div class="item"><span>A社 リニューアル</span><span class="date">2026年10月1日</span></div>
+              <div class="item"><span>B社 保守契約</span><span class="date">2026年9月28日</span></div>
+              <div class="acts"><button class="danger-outline">削除</button></div>
+            </div>
+            <div class="panel mini">
+              <p class="screen-name">案件詳細</p>
+              <p class="kv">更新日: 2026年9月28日</p>
+              <div class="acts">
+                <button class="secondary">キャンセル</button>
+                <button class="primary">保存する</button>
+              </div>
+            </div>
+          </div>
+
+          <dl class="tokens" aria-label="使っているデザイントークン">
+            <div><dt><span class="sw sw-primary"></span>color-action-primary</dt><dd>主要な操作</dd></div>
+            <div><dt><span class="sw sw-danger"></span>color-danger</dt><dd>危険な操作</dd></div>
+            <div><dt><span class="sw sw-neutral"></span>color-action-secondary</dt><dd>補助的な操作</dd></div>
+          </dl>
+
+          <ul class="points">
+            <li>色が役割で決まっていて、危険な操作がどの画面でも同じ見た目になる</li>
+            <li>用語と日付の表記が全画面でそろい、比較や検索がしやすい</li>
+            <li>部品の形がそろい、一度覚えた使い方を他の画面でも使える</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

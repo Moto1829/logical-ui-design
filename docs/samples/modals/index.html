@@ -80,6 +80,79 @@
           </ul>
         </article>
       </section>
+
+      <section class="try" aria-labelledby="try-title">
+        <h2 id="try-title">操作して比べる</h2>
+        <p class="summary">ボタンでモーダルを開き、Escキーで閉じられるか、閉じた後にフォーカスがどこへ戻るかを確かめてください。</p>
+        <div class="try-grid">
+          <article class="card">
+            <span class="badge badge-bad">Bad</span>
+            <div class="try-box">
+              <button class="flat" type="button" id="open-bad">配送先を変更</button>
+              <p class="try-status" id="bad-status"></p>
+            </div>
+          </article>
+          <article class="card">
+            <span class="badge badge-good">Good</span>
+            <div class="try-box">
+              <button class="primary" type="button" id="open-good">配送先を変更</button>
+              <p class="try-status" id="good-status" role="status"></p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <div class="fake-backdrop" id="bad-modal" hidden>
+        <div class="modal crowded">
+          <h3>お知らせ</h3>
+          <p>配送先の変更、メール設定、アンケートを確認してください。</p>
+          <div class="actions even">
+            <button class="flat" type="button">あとで</button>
+            <button class="flat" type="button">閉じる</button>
+            <button class="flat" type="button">OK</button>
+          </div>
+        </div>
+      </div>
+
+      <dialog class="modal focused real-dialog" id="good-modal" aria-labelledby="good-modal-title">
+        <form method="dialog">
+          <div class="modal-head">
+            <h3 id="good-modal-title">配送先を変更しますか</h3>
+            <button class="icon-button" value="cancel" aria-label="閉じる">×</button>
+          </div>
+          <p>編集中の配送先は保存されません。新しい配送先を選び直します。</p>
+          <div class="actions split">
+            <button class="secondary" value="cancel">キャンセル</button>
+            <button class="primary" value="change">配送先を変更する</button>
+          </div>
+        </form>
+      </dialog>
     </main>
+    <script>
+      (function () {
+        var openBad = document.getElementById("open-bad");
+        var badModal = document.getElementById("bad-modal");
+        openBad.addEventListener("click", function () {
+          badModal.hidden = false;
+        });
+        badModal.querySelectorAll("button").forEach(function (b) {
+          b.addEventListener("click", function () {
+            badModal.hidden = true;
+            document.getElementById("bad-status").textContent = "閉じました。どのボタンでも結果は同じで、何が起きたのか分かりません。";
+          });
+        });
+
+        var openGood = document.getElementById("open-good");
+        var goodModal = document.getElementById("good-modal");
+        openGood.addEventListener("click", function () {
+          goodModal.showModal();
+        });
+        goodModal.addEventListener("close", function () {
+          var msg = goodModal.returnValue === "change" ? "配送先の選択画面へ進みます。" : "変更せずに閉じました。入力中の内容はそのままです。";
+          document.getElementById("good-status").textContent = msg;
+          openGood.focus();
+        });
+      })();
+    </script>
   </body>
 </html>

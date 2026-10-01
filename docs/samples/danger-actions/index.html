@@ -71,6 +71,69 @@
           </ul>
         </article>
       </section>
+
+      <section class="try" aria-labelledby="try-title">
+        <h2 id="try-title">操作して比べる</h2>
+        <p class="summary">案件を削除して、確認の仕方と、取り消せるかどうかの違いを確かめてください。</p>
+        <div class="try-grid">
+          <article class="card">
+            <span class="badge badge-bad">Bad</span>
+            <div class="try-box">
+              <ul class="try-list" id="bad-list">
+                <li><span>A社 リニューアル</span><button class="danger-solid" type="button">削除</button></li>
+                <li><span>B社 保守契約</span><button class="danger-solid" type="button">削除</button></li>
+                <li><span>C社 新規提案</span><button class="danger-solid" type="button">削除</button></li>
+              </ul>
+            </div>
+          </article>
+          <article class="card">
+            <span class="badge badge-good">Good</span>
+            <div class="try-box">
+              <ul class="try-list" id="good-list">
+                <li><span>A社 リニューアル</span><button class="danger-outline" type="button">削除</button></li>
+                <li><span>B社 保守契約</span><button class="danger-outline" type="button">削除</button></li>
+                <li><span>C社 新規提案</span><button class="danger-outline" type="button">削除</button></li>
+              </ul>
+              <div class="toast undo-toast" id="undo" role="status" hidden>
+                <span id="undo-text"></span>
+                <button class="secondary" type="button" id="undo-btn">元に戻す</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
     </main>
+    <script>
+      (function () {
+        document.getElementById("bad-list").addEventListener("click", function (e) {
+          if (e.target.tagName !== "BUTTON") return;
+          if (window.confirm("削除してもよろしいですか？")) {
+            e.target.closest("li").remove();
+          }
+        });
+
+        var list = document.getElementById("good-list");
+        var toast = document.getElementById("undo");
+        var last = null;
+        var timer = null;
+        list.addEventListener("click", function (e) {
+          if (e.target.tagName !== "BUTTON") return;
+          var li = e.target.closest("li");
+          last = { el: li, next: li.nextElementSibling };
+          li.remove();
+          document.getElementById("undo-text").textContent = "「" + li.querySelector("span").textContent + "」を削除しました";
+          toast.hidden = false;
+          clearTimeout(timer);
+          timer = setTimeout(function () { toast.hidden = true; last = null; }, 8000);
+        });
+        document.getElementById("undo-btn").addEventListener("click", function () {
+          if (!last) return;
+          list.insertBefore(last.el, last.next);
+          last.el.querySelector("button").focus();
+          last = null;
+          toast.hidden = true;
+        });
+      })();
+    </script>
   </body>
 </html>

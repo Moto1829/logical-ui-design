@@ -48,8 +48,8 @@
 <div class="link-grid two-up compact-cards">
 	<a class="feature-card" href="forms/index.html"><strong>フォームUIの比較サンプル</strong><p>入力負荷とエラー回復の差を見る。</p></a>
 	<a class="feature-card" href="buttons/index.html"><strong>ボタン優先順位の比較サンプル</strong><p>主行動と副行動の見え方を比較する。</p></a>
-	<a class="feature-card" href="feedback/index.html"><strong>フィードバック設計の比較サンプル</strong><p>反応の見え方が安心感にどう影響するかを見る。</p></a>
-	<a class="feature-card" href="modals/index.html"><strong>モーダル設計の比較サンプル</strong><p>割り込みの強さと文脈保持の設計を確認する。</p></a>
+	<a class="feature-card" href="feedback/index.html"><strong>フィードバック設計の比較サンプル</strong><p>反応の見え方が安心感にどう影響するかを、操作して確かめる。</p></a>
+	<a class="feature-card" href="modals/index.html"><strong>モーダル設計の比較サンプル</strong><p>割り込みの強さと閉じ方を、操作して確かめる。</p></a>
 </div>
 
 ### 情報設計と一覧
@@ -67,7 +67,7 @@
 	<a class="feature-card" href="empty-states/index.html"><strong>空状態の比較サンプル</strong><p>何もない状態で行動を促せるかを見る。</p></a>
 	<a class="feature-card" href="error-states/index.html"><strong>エラー状態の比較サンプル</strong><p>失敗から回復できる導線を比較する。</p></a>
 	<a class="feature-card" href="onboarding/index.html"><strong>オンボーディングの比較サンプル</strong><p>説明過多と段階的開示の差を見る。</p></a>
-	<a class="feature-card" href="danger-actions/index.html"><strong>危険操作の比較サンプル</strong><p>取り返しのつかない操作をどう守るか確認する。</p></a>
+	<a class="feature-card" href="danger-actions/index.html"><strong>危険操作の比較サンプル</strong><p>確認ダイアログと取り消しの違いを、操作して確かめる。</p></a>
 </div>
 
 ### 実装とレビュー
@@ -79,8 +79,37 @@
 	<a class="feature-card" href="review-case/index.html"><strong>UIレビューケースの比較サンプル</strong><p>複数問題が重なった画面をまとめて読み解く。</p></a>
 </div>
 
+### 操作の流れと信頼
+
+<div class="link-grid two-up compact-cards">
+	<a class="feature-card" href="loading/index.html"><strong>待ち時間と読み込みの比較サンプル</strong><p>スケルトン表示と進捗表示で待ちの不安を減らす。</p></a>
+	<a class="feature-card" href="list-operations/index.html"><strong>一覧操作の比較サンプル</strong><p>並び順、選択件数、一括操作の対象を見せる。</p></a>
+	<a class="feature-card" href="wizard/index.html"><strong>複数ステップ入力の比較サンプル</strong><p>全体の見通しと修正の戻り道を確認する。</p></a>
+	<a class="feature-card" href="notifications/index.html"><strong>通知とメッセージの比較サンプル</strong><p>割り込みの強さと表示位置の選び方を見る。</p></a>
+	<a class="feature-card" href="dark-patterns/index.html"><strong>ダークパターンの比較サンプル</strong><p>既定値や文言による誘導を見抜く。</p></a>
+</div>
+
+### 発展テーマ
+
+<div class="link-grid two-up compact-cards">
+	<a class="feature-card" href="ai-features/index.html"><strong>AI機能の比較サンプル</strong><p>AIの出力を確認して使える下書きとして見せる。</p></a>
+	<a class="feature-card" href="settings/index.html"><strong>設定画面の比較サンプル</strong><p>反映のタイミングと影響範囲を見せる。</p></a>
+	<a class="feature-card" href="consistency/index.html"><strong>一貫性の比較サンプル</strong><p>画面をまたいで見た目と言葉をそろえる。</p></a>
+	<a class="feature-card" href="data-visualization/index.html"><strong>データ可視化の比較サンプル</strong><p>読み取らせたい問いに合うグラフを選ぶ。</p></a>
+	<a class="feature-card" href="date-number-input/index.html"><strong>日付・数値入力の比較サンプル</strong><p>形式と単位の迷いをなくす。</p></a>
+	<a class="feature-card" href="motion/index.html"><strong>モーションの比較サンプル</strong><p>動きの違いを操作して確かめる。</p></a>
+</div>
+
+### 原則とナビゲーション
+
+<div class="link-grid two-up compact-cards">
+	<a class="feature-card" href="perception/index.html"><strong>認知の原則の比較サンプル</strong><p>近接、再認、フィッツの法則を画面で確かめる。</p></a>
+	<a class="feature-card" href="navigation/index.html"><strong>ナビゲーションの比較サンプル</strong><p>現在地と戻り道が読み取れるかを見る。</p></a>
+</div>
+
 ## 章から探す
 
+- [第2章 人はどう画面を認知するか](../02-perception-and-cognition.md): 認知の原則
 - [第3章 情報設計とレイアウト](../03-information-architecture-and-layout.md): 一覧、ダッシュボード、テーブルとカード
 - [第4章 フォームと入力UI](../04-forms-and-inputs.md): フォーム
 - [第5章 状態変化とフィードバック](../05-feedback-and-response.md): フィードバック
@@ -95,7 +124,18 @@
 - [第18章 ボタンとアクションの設計](../18-buttons-and-actions.md): ボタン
 - [第19章 モーダルと割り込みの設計](../19-modals-and-interruption.md): モーダル
 - [第20章 検索とフィルタの設計](../20-search-and-filters.md): 検索UIとフィルタUI
-- [第21章 ナビゲーションと画面遷移](../21-navigation-and-wayfinding.md): 一覧、モバイルUI
+- [第21章 ナビゲーションと画面遷移](../21-navigation-and-wayfinding.md): ナビゲーション、一覧、モバイルUI
+- [第22章 待ち時間と読み込みの設計](../22-loading-and-waiting.md): 待ち時間と読み込み
+- [第23章 一覧の操作設計](../23-list-operations.md): 一覧操作
+- [第24章 複数ステップの入力設計](../24-multi-step-forms.md): 複数ステップ入力
+- [第25章 通知とメッセージの階層](../25-notifications-and-messages.md): 通知とメッセージ
+- [第26章 ダークパターンと倫理的なUI](../26-dark-patterns-and-ethics.md): ダークパターン
+- [第27章 AI機能のUI設計](../27-ai-features.md): AI機能
+- [第28章 設定画面の設計](../28-settings-screens.md): 設定画面
+- [第29章 一貫性とデザインシステム](../29-consistency-and-design-systems.md): 一貫性
+- [第30章 データ可視化の基礎](../30-data-visualization.md): データ可視化
+- [第31章 日付、時刻、数値の入力](../31-date-time-number-input.md): 日付・数値入力
+- [第32章 モーションとアニメーション](../32-motion-and-animation.md): モーション
 
 ## ナビゲーション
 

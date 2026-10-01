@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>一覧操作の比較サンプル</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <p class="eyebrow">UI Sample</p>
+        <h1>一覧の並び順と選択状態をどう見せるか</h1>
+        <p class="lead">
+          並べ替えや一括操作は便利ですが、今の状態が見えないと、対象を取り違えたまま操作してしまいます。
+        </p>
+        <nav class="page-nav" aria-label="ページナビゲーション">
+          <a href="../../index.html">学習トップへ</a>
+          <a href="../index.html">サンプル一覧へ</a>
+        </nav>
+      </header>
+
+      <section class="comparison">
+        <article class="card bad-example">
+          <span class="badge badge-bad">Bad</span>
+          <h2>悪い例</h2>
+          <p class="summary">並び順も選択件数も表示されず、一括操作の対象が分かりません。</p>
+
+          <div class="panel">
+            <div class="toolbar">
+              <button class="neutral small">承認</button>
+              <button class="neutral small">却下</button>
+            </div>
+            <table class="list">
+              <thead>
+                <tr>
+                  <th><input type="checkbox" checked aria-label="選択" /></th>
+                  <th>申請者</th>
+                  <th>申請日</th>
+                  <th>金額</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><input type="checkbox" checked aria-label="選択" /></td><td>佐藤</td><td>6/12</td><td>12,000</td></tr>
+                <tr><td><input type="checkbox" checked aria-label="選択" /></td><td>田中</td><td>6/03</td><td>4,800</td></tr>
+                <tr><td><input type="checkbox" checked aria-label="選択" /></td><td>鈴木</td><td>6/18</td><td>30,500</td></tr>
+              </tbody>
+            </table>
+            <div class="pager plain">
+              <a href="#">次へ</a>
+            </div>
+          </div>
+
+          <ul class="points">
+            <li>どの列で並んでいるのか、並び順に意味があるのか分からない</li>
+            <li>全選択が「このページだけ」か「全件」か分からない</li>
+            <li>承認ボタンに件数がなく、何件を処理するのか読めない</li>
+          </ul>
+        </article>
+
+        <article class="card good-example">
+          <span class="badge badge-good">Good</span>
+          <h2>良い例</h2>
+          <p class="summary">並び順、選択範囲、件数を画面が保持し、操作の文言に反映しています。</p>
+
+          <div class="panel">
+            <div class="selection-bar" role="status">
+              <span><strong>3件を選択中</strong>（このページの全件）</span>
+              <button class="link-button">全42件を選択</button>
+              <button class="link-button">選択を解除</button>
+            </div>
+            <div class="toolbar">
+              <button class="primary small">3件を承認</button>
+              <button class="secondary small">3件を却下…</button>
+            </div>
+            <table class="list">
+              <thead>
+                <tr>
+                  <th><input type="checkbox" checked aria-label="このページの全件を選択" /></th>
+                  <th>申請者</th>
+                  <th aria-sort="ascending" class="sorted">申請日 <span aria-hidden="true">▲</span><span class="sort-label">古い順</span></th>
+                  <th>金額</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="selected"><td><input type="checkbox" checked aria-label="田中を選択" /></td><td>田中</td><td>6/03</td><td class="num">4,800</td></tr>
+                <tr class="selected"><td><input type="checkbox" checked aria-label="佐藤を選択" /></td><td>佐藤</td><td>6/12</td><td class="num">12,000</td></tr>
+                <tr class="selected"><td><input type="checkbox" checked aria-label="鈴木を選択" /></td><td>鈴木</td><td>6/18</td><td class="num">30,500</td></tr>
+              </tbody>
+            </table>
+            <div class="pager">
+              <span>42件中 1〜3件</span>
+              <nav aria-label="ページ送り">
+                <a href="#" aria-current="page" class="current">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">次へ</a>
+              </nav>
+            </div>
+          </div>
+
+          <ul class="points">
+            <li>申請日の古い順という、処理に意味のある初期の並び順が見える</li>
+            <li>選択件数と範囲が上部にまとまり、全件選択への切り替えが別にある</li>
+            <li>ボタンの文言に件数が入り、総件数と表示範囲も分かる</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

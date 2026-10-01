@@ -214,3 +214,64 @@ button {
     align-items: stretch;
   }
 }
+
+/* 操作して比べる */
+.try {
+  margin-top: 36px;
+}
+
+.try > h2 {
+  margin: 0 0 6px;
+}
+
+.try-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 16px;
+}
+
+.try-box {
+  min-height: 150px;
+  margin-top: 14px;
+  padding: 16px;
+  border: 1px dashed var(--line);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.try-status {
+  min-height: 1.6em;
+  margin: 12px 0 0;
+  font-size: 0.92rem;
+}
+
+.try-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  font-size: 0.9rem;
+}
+
+.try-option input {
+  width: auto;
+  min-height: 0;
+  margin: 0;
+}
+
+@media (max-width: 860px) {
+  .try-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.weak-text {
+  color: #a3a69f;
+  font-size: 0.8rem;
+}
+
+#fb-good button[disabled] {
+  opacity: 0.7;
+  cursor: progress;
+}

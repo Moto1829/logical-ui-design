@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>データ可視化の比較サンプル</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <p class="eyebrow">UI Sample</p>
+        <h1>グラフで何を読み取らせたいかを決める</h1>
+        <p class="lead">
+          同じデータでも、グラフの種類、色、軸の選び方によって、読み取れることが大きく変わります。問い合わせの種類別の件数を例に比べます。
+        </p>
+        <nav class="page-nav" aria-label="ページナビゲーション">
+          <a href="../../index.html">学習トップへ</a>
+          <a href="../index.html">サンプル一覧へ</a>
+        </nav>
+      </header>
+
+      <section class="comparison">
+        <article class="card bad-example">
+          <span class="badge badge-bad">Bad</span>
+          <h2>悪い例</h2>
+          <p class="summary">7項目の円グラフを虹色で塗り分け、凡例を離れた場所に置いています。</p>
+
+          <div class="panel chart-panel">
+            <h3>問い合わせの内訳 <span class="delta-bad">+8%</span></h3>
+            <svg viewBox="0 0 200 200" class="pie" role="img" aria-label="問い合わせの内訳の円グラフ">
+              <circle r="45" cx="100" cy="100" fill="transparent" stroke="#e8453c" stroke-width="90" stroke-dasharray="0 0.0 70.7 282.7" transform="rotate(-90 100 100)" />
+              <circle r="45" cx="100" cy="100" fill="transparent" stroke="#f39c12" stroke-width="90" stroke-dasharray="0 70.7 56.5 282.7" transform="rotate(-90 100 100)" />
+              <circle r="45" cx="100" cy="100" fill="transparent" stroke="#f1c40f" stroke-width="90" stroke-dasharray="0 127.2 45.1 282.7" transform="rotate(-90 100 100)" />
+              <circle r="45" cx="100" cy="100" fill="transparent" stroke="#2ecc71" stroke-width="90" stroke-dasharray="0 172.4 36.7 282.7" transform="rotate(-90 100 100)" />
+              <circle r="45" cx="100" cy="100" fill="transparent" stroke="#3498db" stroke-width="90" stroke-dasharray="0 209.1 31.0 282.7" transform="rotate(-90 100 100)" />
+              <circle r="45" cx="100" cy="100" fill="transparent" stroke="#9b59b6" stroke-width="90" stroke-dasharray="0 240.1 22.6 282.7" transform="rotate(-90 100 100)" />
+              <circle r="45" cx="100" cy="100" fill="transparent" stroke="#e84393" stroke-width="90" stroke-dasharray="0 262.7 20.1 282.7" transform="rotate(-90 100 100)" />
+            </svg>
+            <ul class="legend">
+              <li><span style="background:#e8453c"></span>ログイン</li>
+              <li><span style="background:#f39c12"></span>請求</li>
+              <li><span style="background:#f1c40f"></span>操作方法</li>
+              <li><span style="background:#2ecc71"></span>不具合</li>
+              <li><span style="background:#3498db"></span>解約</li>
+              <li><span style="background:#9b59b6"></span>契約変更</li>
+              <li><span style="background:#e84393"></span>その他</li>
+            </ul>
+          </div>
+
+          <ul class="points">
+            <li>近い大きさの項目どうしは、角度では大小を比べられない</li>
+            <li>色と項目の対応を覚えて、凡例とグラフを往復する必要がある</li>
+            <li>「+8%」が何との比較か分からず、判断に使えない</li>
+          </ul>
+        </article>
+
+        <article class="card good-example">
+          <span class="badge badge-good">Good</span>
+          <h2>良い例</h2>
+          <p class="summary">件数順の横棒グラフにし、注目させたい項目だけに色を付け、名前と値を直接書いています。</p>
+
+          <div class="panel chart-panel">
+            <h3>問い合わせの内訳</h3>
+            <p class="chart-note">10月の合計 1,240件（前月比 +8%）。ログインの問い合わせが最も多い。</p>
+            <ul class="bars" aria-label="種類別の問い合わせ件数">
+              <li class="hl"><span class="name">ログイン</span><span class="bar" style="width:100%"></span><span class="val">310件</span></li>
+              <li><span class="name">請求</span><span class="bar" style="width:80%"></span><span class="val">248件</span></li>
+              <li><span class="name">操作方法</span><span class="bar" style="width:64%"></span><span class="val">198件</span></li>
+              <li><span class="name">不具合</span><span class="bar" style="width:52%"></span><span class="val">161件</span></li>
+              <li><span class="name">解約</span><span class="bar" style="width:44%"></span><span class="val">136件</span></li>
+              <li><span class="name">契約変更</span><span class="bar" style="width:32%"></span><span class="val">99件</span></li>
+              <li><span class="name">その他</span><span class="bar" style="width:28%"></span><span class="val">88件</span></li>
+            </ul>
+          </div>
+
+          <ul class="points">
+            <li>棒の長さで比べられ、件数順の並びで順位も一目で分かる</li>
+            <li>伝えたい項目だけに色があり、他は灰色で背景に退いている</li>
+            <li>比較の対象と合計が書かれ、変化の意味が分かる</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

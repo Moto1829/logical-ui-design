@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>モーションの比較サンプル</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <p class="eyebrow">UI Sample</p>
+        <h1>動きを、装飾ではなく情報として使う</h1>
+        <p class="lead">
+          動きは最も強く注意を引きます。ボタンを押して、動きが理解を助ける場合と、作業を妨げる場合の違いを確かめてください。
+        </p>
+        <nav class="page-nav" aria-label="ページナビゲーション">
+          <a href="../../index.html">学習トップへ</a>
+          <a href="../index.html">サンプル一覧へ</a>
+        </nav>
+      </header>
+
+      <section class="comparison">
+        <article class="card bad-example">
+          <span class="badge badge-bad">Bad</span>
+          <h2>悪い例</h2>
+          <p class="summary">止められない流れる帯、一瞬で消える項目、操作を止める長い演出があります。</p>
+
+          <div class="panel" id="bad">
+            <div class="ticker" aria-hidden="true"><span>秋の大感謝セール開催中！ 全品ポイント5倍！ 秋の大感謝セール開催中！ 全品ポイント5倍！</span></div>
+            <ul class="items">
+              <li><span>ノート A5</span><button class="neutral small" data-act="del">削除</button></li>
+              <li><span>ボールペン 3本組</span><button class="neutral small" data-act="del">削除</button></li>
+              <li><span>付箋セット</span><button class="neutral small" data-act="del">削除</button></li>
+            </ul>
+            <div class="cart-row">
+              <button class="neutral" data-act="add">カートに入れる</button>
+              <span class="cart">カート <b class="count">0</b></span>
+            </div>
+            <p class="status" aria-live="polite"></p>
+          </div>
+
+          <ul class="points">
+            <li>流れ続ける帯を止める手段がなく、本文を読む妨げになる</li>
+            <li>削除した項目が一瞬で消え、どれが消えて何が詰まったのか見失う</li>
+            <li>1.5秒の演出が終わるまで、他の操作を受け付けない</li>
+          </ul>
+        </article>
+
+        <article class="card good-example">
+          <span class="badge badge-good">Good</span>
+          <h2>良い例</h2>
+          <p class="summary">お知らせは止められ、削除は短く縮んで消え、カートへの追加は待たせずに知らせます。</p>
+
+          <div class="panel" id="good">
+            <div class="notice">
+              <span class="notice-text">秋の大感謝セール開催中（10月31日まで）</span>
+              <button class="link-button" data-act="pause">一時停止</button>
+            </div>
+            <ul class="items">
+              <li><span>ノート A5</span><button class="secondary small" data-act="del">削除</button></li>
+              <li><span>ボールペン 3本組</span><button class="secondary small" data-act="del">削除</button></li>
+              <li><span>付箋セット</span><button class="secondary small" data-act="del">削除</button></li>
+            </ul>
+            <div class="cart-row">
+              <button class="primary" data-act="add">カートに入れる</button>
+              <span class="cart">カート <b class="count">0</b></span>
+            </div>
+            <p class="status" aria-live="polite"></p>
+          </div>
+
+          <ul class="points">
+            <li>自動で切り替わるお知らせに一時停止があり、動きを控える設定では最初から止まる</li>
+            <li>削除した項目が0.2秒で縮んで消え、何が起きたかが追える</li>
+            <li>カートの件数が短く強調されるだけで、操作は待たされない</li>
+          </ul>
+        </article>
+      </section>
+
+      <p class="note">※ 1秒間に3回を超える点滅は、光過敏性発作を起こす危険があるため、このサンプルにも含めていません。</p>
+    </main>
+    <script>
+      (function () {
+        var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+        // 悪い例
+        var bad = document.getElementById("bad");
+        var badBusy = false;
+        bad.addEventListener("click", function (e) {
+          var act = e.target.getAttribute("data-act");
+          if (!act || badBusy) return;
+          if (act === "del") {
+            e.target.closest("li").remove();
+          }
+          if (act === "add") {
+            badBusy = true;
+            bad.querySelectorAll("button").forEach(function (b) { b.disabled = true; });
+            var fly = document.createElement("div");
+            fly.className = "fly";
+            fly.textContent = "🛒";
+            bad.appendChild(fly);
+            setTimeout(function () {
+              fly.remove();
+              var c = bad.querySelector(".count");
+              c.textContent = Number(c.textContent) + 1;
+              bad.querySelectorAll("button").forEach(function (b) { b.disabled = false; });
+              badBusy = false;
+            }, 1500);
+          }
+        });
+
+        // 良い例
+        var good = document.getElementById("good");
+        var notices = ["秋の大感謝セール開催中（10月31日まで）", "全品ポイント5倍（会員限定）", "送料無料は3,000円以上のご注文から"];
+        var idx = 0;
+        var timer = null;
+        var noticeText = good.querySelector(".notice-text");
+        var pauseBtn = good.querySelector("[data-act=pause]");
+        function start() {
+          timer = setInterval(function () {
+            idx = (idx + 1) % notices.length;
+            noticeText.textContent = notices[idx];
+          }, 4000);
+          pauseBtn.textContent = "一時停止";
+        }
+        function stop() {
+          clearInterval(timer);
+          timer = null;
+          pauseBtn.textContent = "再生";
+        }
+        if (reduce) { stop(); } else { start(); }
+
+        good.addEventListener("click", function (e) {
+          var act = e.target.getAttribute("data-act");
+          if (!act) return;
+          if (act === "pause") {
+            if (timer) { stop(); } else { start(); }
+          }
+          if (act === "del") {
+            var li = e.target.closest("li");
+            var name = li.querySelector("span").textContent;
+            li.classList.add("leaving");
+            setTimeout(function () { li.remove(); }, reduce ? 0 : 200);
+            good.querySelector(".status").textContent = name + "を削除しました";
+          }
+          if (act === "add") {
+            var c = good.querySelector(".count");
+            c.textContent = Number(c.textContent) + 1;
+            c.classList.remove("bump");
+            void c.offsetWidth;
+            c.classList.add("bump");
+            good.querySelector(".status").textContent = "カートに入れました（" + c.textContent + "点）";
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>

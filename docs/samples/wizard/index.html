@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>複数ステップ入力の比較サンプル</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <p class="eyebrow">UI Sample</p>
+        <h1>複数ステップの入力で、見通しと戻り道をどう示すか</h1>
+        <p class="lead">
+          ステップに分けるだけでは負荷は減りません。全体の長さ、現在地、修正のしやすさが見えて初めて、安心して先に進めます。
+        </p>
+        <nav class="page-nav" aria-label="ページナビゲーション">
+          <a href="../../index.html">学習トップへ</a>
+          <a href="../index.html">サンプル一覧へ</a>
+        </nav>
+      </header>
+
+      <section class="comparison">
+        <article class="card bad-example">
+          <span class="badge badge-bad">Bad</span>
+          <h2>悪い例</h2>
+          <p class="summary">番号だけのステップ表示で、確認画面から修正する手段がありません。</p>
+
+          <div class="panel">
+            <p class="step-text">ステップ 4</p>
+            <h3>確認</h3>
+            <dl class="summary-list">
+              <div><dt>氏名</dt><dd>山田 花子</dd></div>
+              <div><dt>プラン</dt><dd>スタンダード</dd></div>
+              <div><dt>支払い</dt><dd>クレジットカード（末尾 1234）</dd></div>
+            </dl>
+            <div class="actions">
+              <button class="neutral">戻る</button>
+              <button class="neutral">次へ</button>
+            </div>
+          </div>
+
+          <ul class="points">
+            <li>全体で何ステップあり、あとどれくらいで終わるのか分からない</li>
+            <li>修正するには「戻る」を繰り返すしかなく、入力が残るかも分からない</li>
+            <li>「次へ」で何が確定するのか、押した結果が読めない</li>
+          </ul>
+        </article>
+
+        <article class="card good-example">
+          <span class="badge badge-good">Good</span>
+          <h2>良い例</h2>
+          <p class="summary">各ステップの内容と現在地を示し、確認画面から該当箇所へ直接戻れます。</p>
+
+          <div class="panel">
+            <ol class="stepper" aria-label="申し込みの手順">
+              <li class="done"><span class="dot">✓</span>お客様情報</li>
+              <li class="done"><span class="dot">✓</span>プラン</li>
+              <li class="done"><span class="dot">✓</span>お支払い</li>
+              <li class="current" aria-current="step"><span class="dot">4</span>確認</li>
+            </ol>
+            <h3>入力内容の確認</h3>
+            <dl class="summary-list">
+              <div><dt>お客様情報</dt><dd>山田 花子</dd><a href="#">修正</a></div>
+              <div><dt>プラン</dt><dd>スタンダード（月額 1,980円）</dd><a href="#">修正</a></div>
+              <div><dt>お支払い</dt><dd>クレジットカード（末尾 1234）</dd><a href="#">修正</a></div>
+            </dl>
+            <p class="save-note">入力内容は自動で保存されています（7日間）。</p>
+            <div class="actions">
+              <button class="secondary">お支払いに戻る</button>
+              <button class="primary">申し込みを確定する</button>
+            </div>
+          </div>
+
+          <ul class="points">
+            <li>ステップの名前と完了状態から、全体の流れと残りが分かる</li>
+            <li>各項目の「修正」から該当ステップへ直接戻れる</li>
+            <li>確定ボタンの文言が、押した後に起きることを表している</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

@@ -21,6 +21,8 @@ theme:
       accent: indigo
 markdown_extensions:
   - admonition
+  - pymdownx.details
+  - pymdownx.superfences
   - attr_list
   - tables
   - toc:
@@ -63,6 +65,22 @@ nav:
       - 第19章 モーダルと割り込みの設計: 19-modals-and-interruption.md
       - 第20章 検索とフィルタの設計: 20-search-and-filters.md
       - 第21章 ナビゲーションと画面遷移: 21-navigation-and-wayfinding.md
+  - 操作の流れと信頼:
+      - 第22章 待ち時間と読み込みの設計: 22-loading-and-waiting.md
+      - 第23章 一覧の操作設計: 23-list-operations.md
+      - 第24章 複数ステップの入力設計: 24-multi-step-forms.md
+      - 第25章 通知とメッセージの階層: 25-notifications-and-messages.md
+      - 第26章 ダークパターンと倫理的なUI: 26-dark-patterns-and-ethics.md
+  - 発展テーマ:
+      - 第27章 AI機能のUI設計: 27-ai-features.md
+      - 第28章 設定画面の設計: 28-settings-screens.md
+      - 第29章 一貫性とデザインシステム: 29-consistency-and-design-systems.md
+      - 第30章 データ可視化の基礎: 30-data-visualization.md
+      - 第31章 日付、時刻、数値の入力: 31-date-time-number-input.md
+      - 第32章 モーションとアニメーション: 32-motion-and-animation.md
   - 補助資料:
       - UIレビュー用テンプレート: review-template.md
+      - 原則と用語の索引: glossary.md
+      - アンチパターン集: anti-patterns.md
+      - ユーザビリティテストの簡易手順: usability-testing.md
       - サンプル一覧: samples/index.md

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>日付・数値入力の比較サンプル</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <p class="eyebrow">UI Sample</p>
+        <h1>日付と数値の入力で、形式と単位の迷いをなくす</h1>
+        <p class="lead">
+          日付や数値は、形式や単位を誤っても見た目では気づきにくい値です。入力部品の選び方と、受け入れる側の工夫で比べます。
+        </p>
+        <nav class="page-nav" aria-label="ページナビゲーション">
+          <a href="../../index.html">学習トップへ</a>
+          <a href="../index.html">サンプル一覧へ</a>
+        </nav>
+      </header>
+
+      <section class="comparison">
+        <article class="card bad-example">
+          <span class="badge badge-bad">Bad</span>
+          <h2>悪い例</h2>
+          <p class="summary">生年月日をカレンダーで選ばせ、形式の違いをエラーにし、単位を見出しにしか書いていません。</p>
+
+          <div class="panel">
+            <div class="field">
+              <label>生年月日</label>
+              <div class="calendar" aria-hidden="true">
+                <div class="cal-head"><span>‹</span><span>2026年10月</span><span>›</span></div>
+                <div class="cal-grid">
+                  <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span>
+                  <span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span>
+                </div>
+              </div>
+            </div>
+            <div class="field">
+              <label for="bad-tel">電話番号（半角数字・ハイフンなし）</label>
+              <input id="bad-tel" type="text" value="090-1234-5678" class="is-error" />
+              <p class="error-text">入力形式が正しくありません</p>
+            </div>
+            <div class="field">
+              <label for="bad-budget">予算（千円単位）</label>
+              <input id="bad-budget" type="number" value="1200000" />
+            </div>
+          </div>
+
+          <ul class="points">
+            <li>生年月日のために、何十年分も月をさかのぼる必要がある</li>
+            <li>ハイフン付きという一般的な書き方がエラーになり、直し方も分からない</li>
+            <li>単位が見出しにしかなく、円単位で入れて1000倍の金額になっている</li>
+          </ul>
+        </article>
+
+        <article class="card good-example">
+          <span class="badge badge-good">Good</span>
+          <h2>良い例</h2>
+          <p class="summary">値の性質に合う部品を選び、形式の違いを受け入れ、単位と換算を入力欄の横に置いています。</p>
+
+          <div class="panel">
+            <fieldset class="field">
+              <legend>生年月日</legend>
+              <div class="ymd">
+                <input type="text" inputmode="numeric" value="1990" aria-label="年" /><span>年</span>
+                <input type="text" inputmode="numeric" value="4" aria-label="月" /><span>月</span>
+                <input type="text" inputmode="numeric" value="15" aria-label="日" /><span>日</span>
+              </div>
+            </fieldset>
+            <div class="field">
+              <label for="good-tel">電話番号</label>
+              <input id="good-tel" type="text" inputmode="tel" value="090-1234-5678" />
+              <p class="hint">ハイフンはあってもなくてもかまいません</p>
+            </div>
+            <div class="field">
+              <label for="good-budget">予算</label>
+              <div class="with-unit">
+                <input id="good-budget" type="text" inputmode="numeric" value="1,200" />
+                <span class="unit">千円</span>
+              </div>
+              <p class="hint">＝ 120万円</p>
+            </div>
+            <p class="deadline">申し込み締め切り: 2026年10月31日（土）23:59まで</p>
+          </div>
+
+          <ul class="points">
+            <li>本人が知っている遠い過去の日付は、直接入力の方が速い</li>
+            <li>電話番号の形式の違いはシステム側で吸収している</li>
+            <li>単位が入力欄の横にあり、換算も示されて桁の誤りに気づける</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
